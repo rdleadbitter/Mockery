@@ -1,0 +1,706 @@
+[
+    {
+        "name": "Titans",
+        "city": "Tennessee",
+        "abbreviation": "TEN",
+        "standing": 1,
+        "primary_color": "#0C2340",
+        "secondary_color": "#4B92DB",
+        "picks": [
+            1,
+            33,
+            65,
+            97,
+            129,
+            161,
+            193
+        ],
+        "needs": [
+            "QB",
+            "WR",
+            "EDGE"
+        ]
+    },
+    {
+        "name": "Browns",
+        "city": "Cleveland",
+        "abbreviation": "CLE",
+        "standing": 2,
+        "primary_color": "#311D00",
+        "secondary_color": "#FF3C00",
+        "picks": [
+            2,
+            34,
+            66,
+            98,
+            130,
+            162,
+            194
+        ],
+        "needs": [
+            "QB",
+            "OL",
+            "EDGE"
+        ]
+    },
+    {
+        "name": "Giants",
+        "city": "New York",
+        "abbreviation": "NYG",
+        "standing": 3,
+        "primary_color": "#0B2265",
+        "secondary_color": "#A71930",
+        "picks": [
+            3,
+            35,
+            67,
+            99,
+            131,
+            163,
+            195
+        ],
+        "needs": [
+            "QB",
+            "OL",
+            "LB"
+        ]
+    },
+    {
+        "name": "Patriots",
+        "city": "New England",
+        "abbreviation": "NE",
+        "standing": 4,
+        "primary_color": "#002244",
+        "secondary_color": "#C60C30",
+        "picks": [
+            4,
+            36,
+            68,
+            100,
+            132,
+            164,
+            196
+        ],
+        "needs": [
+            "OL",
+            "DL",
+            "WR"
+        ]
+    },
+    {
+        "name": "Jaguars",
+        "city": "Jacksonville",
+        "abbreviation": "JAX",
+        "standing": 5,
+        "primary_color": "#006778",
+        "secondary_color": "#9F792C",
+        "picks": [
+            5,
+            37,
+            69,
+            101,
+            133,
+            165,
+            197
+        ],
+        "needs": [
+            "DL",
+            "CB",
+            "S"
+        ]
+    },
+    {
+        "name": "Raiders",
+        "city": "Las Vegas",
+        "abbreviation": "LV",
+        "standing": 6,
+        "primary_color": "#000000",
+        "secondary_color": "#A5ACAF",
+        "picks": [
+            6,
+            38,
+            70,
+            102,
+            134,
+            166,
+            198
+        ],
+        "needs": [
+            "QB",
+            "OL",
+            "CB"
+        ]
+    },
+    {
+        "name": "Jets",
+        "city": "New York",
+        "abbreviation": "NYJ",
+        "standing": 7,
+        "primary_color": "#125740",
+        "secondary_color": "#000000",
+        "picks": [
+            7,
+            39,
+            71,
+            103,
+            135,
+            167,
+            199
+        ],
+        "needs": [
+            "QB",
+            "OL",
+            "EDGE"
+        ]
+    },
+    {
+        "name": "Panthers",
+        "city": "Carolina",
+        "abbreviation": "CAR",
+        "standing": 8,
+        "primary_color": "#0085CA",
+        "secondary_color": "#101820",
+        "picks": [
+            8,
+            40,
+            72,
+            104,
+            136,
+            168,
+            200
+        ],
+        "needs": [
+            "OL",
+            "WR",
+            "DL"
+        ]
+    },
+    {
+        "name": "Saints",
+        "city": "New Orleans",
+        "abbreviation": "NO",
+        "standing": 9,
+        "primary_color": "#D3BC8D",
+        "secondary_color": "#101820",
+        "picks": [
+            9,
+            41,
+            73,
+            105,
+            137,
+            169,
+            201
+        ],
+        "needs": [
+            "QB",
+            "WR",
+            "CB"
+        ]
+    },
+    {
+        "name": "Bears",
+        "city": "Chicago",
+        "abbreviation": "CHI",
+        "standing": 10,
+        "primary_color": "#0B162A",
+        "secondary_color": "#C83803",
+        "picks": [
+            10,
+            42,
+            74,
+            106,
+            138,
+            170,
+            202
+        ],
+        "needs": [
+            "OL",
+            "WR",
+            "EDGE"
+        ]
+    },
+    {
+        "name": "49ers",
+        "city": "San Francisco",
+        "abbreviation": "SF",
+        "standing": 11,
+        "primary_color": "#AA0000",
+        "secondary_color": "#B3995D",
+        "picks": [
+            11,
+            43,
+            75,
+            107,
+            139,
+            171,
+            203
+        ],
+        "needs": [
+            "CB",
+            "OL",
+            "DL"
+        ]
+    },
+    {
+        "name": "Cowboys",
+        "city": "Dallas",
+        "abbreviation": "DAL",
+        "standing": 12,
+        "primary_color": "#041E42",
+        "secondary_color": "#869397",
+        "picks": [
+            12,
+            44,
+            76,
+            108,
+            140,
+            172,
+            204
+        ],
+        "needs": [
+            "OL",
+            "DL",
+            "S"
+        ]
+    },
+    {
+        "name": "Dolphins",
+        "city": "Miami",
+        "abbreviation": "MIA",
+        "standing": 13,
+        "primary_color": "#008E97",
+        "secondary_color": "#FC4C02",
+        "picks": [
+            13,
+            45,
+            77,
+            109,
+            141,
+            173,
+            205
+        ],
+        "needs": [
+            "OL",
+            "WR",
+            "CB"
+        ]
+    },
+    {
+        "name": "Colts",
+        "city": "Indianapolis",
+        "abbreviation": "IND",
+        "standing": 14,
+        "primary_color": "#002C5F",
+        "secondary_color": "#A2AAAD",
+        "picks": [
+            14,
+            46,
+            78,
+            110,
+            142,
+            174,
+            206
+        ],
+        "needs": [
+            "QB",
+            "WR",
+            "DL"
+        ]
+    },
+    {
+        "name": "Falcons",
+        "city": "Atlanta",
+        "abbreviation": "ATL",
+        "standing": 15,
+        "primary_color": "#A71930",
+        "secondary_color": "#000000",
+        "picks": [
+            15,
+            47,
+            79,
+            111,
+            143,
+            175,
+            207
+        ],
+        "needs": [
+            "QB",
+            "EDGE",
+            "CB"
+        ]
+    },
+    {
+        "name": "Cardinals",
+        "city": "Arizona",
+        "abbreviation": "ARI",
+        "standing": 16,
+        "primary_color": "#97233F",
+        "secondary_color": "#000000",
+        "picks": [
+            16,
+            48,
+            80,
+            112,
+            144,
+            176,
+            208
+        ],
+        "needs": [
+            "DL",
+            "CB",
+            "WR"
+        ]
+    },
+    {
+        "name": "Bengals",
+        "city": "Cincinnati",
+        "abbreviation": "CIN",
+        "standing": 17,
+        "primary_color": "#FB4F14",
+        "secondary_color": "#000000",
+        "picks": [
+            17,
+            49,
+            81,
+            113,
+            145,
+            177,
+            209
+        ],
+        "needs": [
+            "OL",
+            "CB",
+            "TE"
+        ]
+    },
+    {
+        "name": "Seahawks",
+        "city": "Seattle",
+        "abbreviation": "SEA",
+        "standing": 18,
+        "primary_color": "#002244",
+        "secondary_color": "#69BE28",
+        "picks": [
+            18,
+            50,
+            82,
+            114,
+            146,
+            178,
+            210
+        ],
+        "needs": [
+            "DL",
+            "OL",
+            "CB"
+        ]
+    },
+    {
+        "name": "Buccaneers",
+        "city": "Tampa Bay",
+        "abbreviation": "TB",
+        "standing": 19,
+        "primary_color": "#D50A0A",
+        "secondary_color": "#34302B",
+        "picks": [
+            19,
+            51,
+            83,
+            115,
+            147,
+            179,
+            211
+        ],
+        "needs": [
+            "OL",
+            "CB",
+            "S"
+        ]
+    },
+    {
+        "name": "Broncos",
+        "city": "Denver",
+        "abbreviation": "DEN",
+        "standing": 20,
+        "primary_color": "#002244",
+        "secondary_color": "#FB4F14",
+        "picks": [
+            20,
+            52,
+            84,
+            116,
+            148,
+            180,
+            212
+        ],
+        "needs": [
+            "QB",
+            "OL",
+            "CB"
+        ]
+    },
+    {
+        "name": "Steelers",
+        "city": "Pittsburgh",
+        "abbreviation": "PIT",
+        "standing": 21,
+        "primary_color": "#FFB612",
+        "secondary_color": "#101820",
+        "picks": [
+            21,
+            53,
+            85,
+            117,
+            149,
+            181,
+            213
+        ],
+        "needs": [
+            "CB",
+            "OL",
+            "WR"
+        ]
+    },
+    {
+        "name": "Chargers",
+        "city": "Los Angeles",
+        "abbreviation": "LAC",
+        "standing": 22,
+        "primary_color": "#0080C6",
+        "secondary_color": "#FFC20E",
+        "picks": [
+            22,
+            54,
+            86,
+            118,
+            150,
+            182,
+            214
+        ],
+        "needs": [
+            "WR",
+            "OL",
+            "DL"
+        ]
+    },
+    {
+        "name": "Packers",
+        "city": "Green Bay",
+        "abbreviation": "GB",
+        "standing": 23,
+        "primary_color": "#203731",
+        "secondary_color": "#FFB612",
+        "picks": [
+            23,
+            55,
+            87,
+            119,
+            151,
+            183,
+            215
+        ],
+        "needs": [
+            "WR",
+            "OL",
+            "CB"
+        ]
+    },
+    {
+        "name": "Vikings",
+        "city": "Minnesota",
+        "abbreviation": "MIN",
+        "standing": 24,
+        "primary_color": "#4F2683",
+        "secondary_color": "#FFC62F",
+        "picks": [
+            24,
+            56,
+            88,
+            120,
+            152,
+            184,
+            216
+        ],
+        "needs": [
+            "QB",
+            "CB",
+            "DL"
+        ]
+    },
+    {
+        "name": "Texans",
+        "city": "Houston",
+        "abbreviation": "HOU",
+        "standing": 25,
+        "primary_color": "#03202F",
+        "secondary_color": "#A71930",
+        "picks": [
+            25,
+            57,
+            89,
+            121,
+            153,
+            185,
+            217
+        ],
+        "needs": [
+            "CB",
+            "WR",
+            "OL"
+        ]
+    },
+    {
+        "name": "Rams",
+        "city": "Los Angeles",
+        "abbreviation": "LAR",
+        "standing": 26,
+        "primary_color": "#003594",
+        "secondary_color": "#FFA300",
+        "picks": [
+            26,
+            58,
+            90,
+            122,
+            154,
+            186,
+            218
+        ],
+        "needs": [
+            "OL",
+            "CB",
+            "DL"
+        ]
+    },
+    {
+        "name": "Ravens",
+        "city": "Baltimore",
+        "abbreviation": "BAL",
+        "standing": 27,
+        "primary_color": "#241773",
+        "secondary_color": "#9E7C0C",
+        "picks": [
+            27,
+            59,
+            91,
+            123,
+            155,
+            187,
+            219
+        ],
+        "needs": [
+            "WR",
+            "EDGE",
+            "CB"
+        ]
+    },
+    {
+        "name": "Lions",
+        "city": "Detroit",
+        "abbreviation": "DET",
+        "standing": 28,
+        "primary_color": "#0076B6",
+        "secondary_color": "#B0B7BC",
+        "picks": [
+            28,
+            60,
+            92,
+            124,
+            156,
+            188,
+            220
+        ],
+        "needs": [
+            "CB",
+            "EDGE",
+            "OL"
+        ]
+    },
+    {
+        "name": "Commanders",
+        "city": "Washington",
+        "abbreviation": "WAS",
+        "standing": 29,
+        "primary_color": "#5A1414",
+        "secondary_color": "#FFB612",
+        "picks": [
+            29,
+            61,
+            93,
+            125,
+            157,
+            189,
+            221
+        ],
+        "needs": [
+            "QB",
+            "CB",
+            "OL"
+        ]
+    },
+    {
+        "name": "Bills",
+        "city": "Buffalo",
+        "abbreviation": "BUF",
+        "standing": 30,
+        "primary_color": "#00338D",
+        "secondary_color": "#C60C30",
+        "picks": [
+            30,
+            62,
+            94,
+            126,
+            158,
+            190,
+            222
+        ],
+        "needs": [
+            "WR",
+            "S",
+            "OL"
+        ]
+    },
+    {
+        "name": "Chiefs",
+        "city": "Kansas City",
+        "abbreviation": "KC",
+        "standing": 31,
+        "primary_color": "#E31837",
+        "secondary_color": "#FFB81C",
+        "picks": [
+            31,
+            63,
+            95,
+            127,
+            159,
+            191,
+            223
+        ],
+        "needs": [
+            "WR",
+            "OL",
+            "EDGE"
+        ]
+    },
+    {
+        "name": "Eagles",
+        "city": "Philadelphia",
+        "abbreviation": "PHI",
+        "standing": 32,
+        "primary_color": "#004C54",
+        "secondary_color": "#A5ACAF",
+        "picks": [
+            32,
+            64,
+            96,
+            128,
+            160,
+            192,
+            224
+        ],
+        "needs": [
+            "CB",
+            "S",
+            "DL"
+        ]
+    }
+]
