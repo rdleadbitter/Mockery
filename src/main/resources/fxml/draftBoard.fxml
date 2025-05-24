@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextAlignment?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mockeryfx.DraftBoardController"
+            prefWidth="1000" prefHeight="700">
+
+    <stylesheets>
+        <URL value="@../styles.css"/>
+    </stylesheets>
+
+    <!-- TOP: Current pick info -->
+    <top>
+        <VBox alignment="CENTER" spacing="5" >
+            <padding>
+                <Insets top="5" bottom="5" left="10" right="10"/>
+            </padding>
+
+            <Label fx:id="draftNameLabel" styleClass="title"/>
+
+            <VBox alignment="CENTER">
+                <ImageView fx:id="teamLogoView" fitHeight="120" fitWidth="120" preserveRatio="true"/>
+            </VBox>
+
+            <TextFlow fx:id="teamNeedsFlow" styleClass="needs-flow" textAlignment="CENTER"/>
+            <HBox alignment="CENTER" spacing="20">
+                <Label fx:id="roundLabel"/>
+                <Label fx:id="pickLabel"/>
+                <Label fx:id="teamLabel"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- CENTER: Player list and metadata -->
+    <center>
+        <HBox spacing="30" alignment="CENTER" VBox.vgrow="ALWAYS" >
+            <padding>
+                <Insets top="10" bottom="10" left="20" right="20"/>
+            </padding>
+
+            <!-- Scrollable list of available players -->
+            <VBox spacing="10" prefWidth="300">
+                <Label text="Available Players" styleClass="title"/>
+            
+                <ScrollPane fitToWidth="true" prefWidth="400" prefHeight="500" VBox.vgrow="ALWAYS">
+                    <VBox fx:id="playerListBox" spacing="10"/>
+                </ScrollPane>
+                    <Label text="(Click a player to view details)" style="-fx-font-style: italic;"/>
+            </VBox>
+
+            <!-- Player metadata panel -->
+            <VBox spacing="10" prefWidth="300">
+                <Label text="Selected Player" styleClass="title"/>
+                <Label fx:id="selectedNameLabel"/>
+                <Label fx:id="selectedPositionLabel"/>
+                <Label fx:id="selectedSchoolLabel"/>
+                <Label text="(Stats and measurables coming soon...)" style="-fx-font-style: italic;"/>
+            </VBox>
+
+            <!-- Full pick list (if drafting all teams) -->
+            <VBox spacing="10" prefWidth="300">
+                    <Label text="Draft History" styleClass="title"/>
+                <ScrollPane fitToWidth="true" prefWidth="400" prefHeight="500" VBox.vgrow="ALWAYS">
+                    <VBox fx:id="pickHistoryBox" spacing="6"/>
+                </ScrollPane>
+            </VBox>
+        </HBox>
+    </center>
+
+
+    <!-- BOTTOM: Confirm draft and trade -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="8" maxHeight="80">
+            <padding>
+                <Insets top="5" bottom="10" left="20" right="20"/>
+            </padding>
+
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="confirmDraftButton" text="Confirm Pick" onAction="#handleDraftPlayer" disable="true"/>
+                <TextField fx:id="tradeAbbrField" promptText="Trade to team (abbr)" prefWidth="150"/>
+                <Button text="Trade Pick" onAction="#handleTradePick"/>
+            </HBox>
+
+            <Label fx:id="statusLabel" id="statusLabel"/>
+        </VBox>
+    </bottom>
+</BorderPane>

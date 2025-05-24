@@ -1,0 +1,79 @@
+.root {
+    -fx-font-family: "Bebas Neue", "Roboto", sans-serif;
+    -fx-background-color: #2f362e;
+    -fx-padding: 40;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffffff
+}
+
+.label.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #42e026;
+}
+
+.button {
+    -fx-background-color: #4fb63d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-padding: 12 20;
+    -fx-background-radius: 8;
+}
+
+.button:hover {
+    -fx-background-color: #42e026;
+}
+
+.text-field,
+.password-field {
+    -fx-font-size: 18px;
+    -fx-border-color: #518b46;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-background-color: #2a3329;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+}
+
+.scroll-pane {
+    -fx-background: #2a3329;
+    -fx-border-color: #466141;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+#statusLabel {
+    -fx-text-fill: #e05252;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px
+}
+
+.vbox, .center-box{
+    -fx-alignment: center;
+    -fx-spacing: 15;
+}
+
+.needs-flow {
+    -fx-font-size: 18px; /* Larger text for readability */
+    -fx-text-alignment: center;
+    -fx-padding: 10 0 0 0;
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+}
+
+.needs-available {
+    -fx-fill: white;           /* Brighter for contrast */
+    -fx-font-weight: bold;
+}
+
+.needs-filled {
+    -fx-fill: lightgray;       /* Muted but readable */
+    -fx-strikethrough: true;
+}
