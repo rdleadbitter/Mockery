@@ -4,6 +4,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.ObservableList?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.mockeryfx.DashboardController"
@@ -27,29 +29,55 @@
 
     <!-- CENTER SPLIT VIEW -->
     <center>
-        <HBox spacing="20" HBox.hgrow="ALWAYS">
+        <HBox spacing="20">
             <!-- User Drafts Panel -->
-            <ScrollPane fitToWidth="true" fitToHeight="true" HBox.hgrow="ALWAYS">
-                <VBox alignment="TOP_CENTER" spacing="20">
-                    <padding>
-                        <Insets top="20" right="20" bottom="20" left="20"/>
-                    </padding>
-                    <Label text="Your Mock Drafts" styleClass="title"/>
+            <VBox spacing="20" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER">
+                    <Label text="My Mock Drafts" styleClass="title"/>
+                </HBox>
+                <HBox alignment="CENTER">
                     <Button text="Create New Draft" onAction="#handleCreateDraft"/>
-                    <VBox fx:id="draftList" spacing="10"/>
-                </VBox>
-            </ScrollPane>
+                </HBox>
+                <ScrollPane fitToWidth="true" fitToHeight="true">
+                    <VBox fx:id="draftList" spacing="10" alignment="TOP_CENTER">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </VBox>
 
             <!-- Big Board Panel -->
-            <ScrollPane fitToWidth="true" fitToHeight="true" HBox.hgrow="ALWAYS">
-                <VBox alignment="TOP_CENTER" spacing="20">
-                    <padding>
-                        <Insets top="20" right="20" bottom="20" left="20"/>
-                    </padding>
-                    <Label text="Big Board" styleClass="title"/>
-                    <VBox fx:id="bigBoard" spacing="10" alignment="CENTER_RIGHT"/>
-                </VBox>
-            </ScrollPane>
+            <VBox spacing="20" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER">
+                    <Label text="Consensus Big Board" styleClass="title"/>
+                </HBox>
+                <HBox spacing="10" alignment="CENTER">
+                    <TextField fx:id="searchField" promptText="Search by name or school" />
+                    <ComboBox fx:id="positionFilter" promptText="Filter by Position"/>
+                </HBox>
+                <ScrollPane fitToWidth="true" fitToHeight="true">
+                    <VBox fx:id="bigBoard" spacing="10" alignment="TOP_CENTER">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </VBox>
+
+            <!-- Draft Board Panel -->
+            <VBox spacing="20" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER">
+                    <Label text="Draft Order/Team Needs" styleClass="title"/>
+                </HBox>
+                <ScrollPane fitToWidth="true" fitToHeight="true">
+                    <VBox fx:id="draftOrder" spacing="10" alignment="TOP_CENTER">
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                    </VBox>
+                </ScrollPane>
+            </VBox>
         </HBox>
     </center>
 </BorderPane>

@@ -1,7 +1,10 @@
 package com.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public class MockeryFacade {
@@ -124,4 +127,22 @@ public class MockeryFacade {
     public String getUserDraftTeam() {
         return userDraftTeamAbbr;
     }
+
+    public List<String> getAllPositions() {
+        Set<String> positions = new HashSet<>();
+        for (Player p : PlayerDatabase.getInstance().getPlayers()) {
+            String pos = p.getPosition();
+            if (pos.contains("/")) {
+                for (String part : pos.split("/")) {
+                    positions.add(part.trim());
+                }
+            } else {
+                positions.add(pos.trim());
+            }
+        }
+        List<String> sorted = new ArrayList<>(positions);
+        Collections.sort(sorted);
+        return sorted;
+    }
+
 }

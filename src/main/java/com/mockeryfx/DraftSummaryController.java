@@ -49,7 +49,6 @@ public class DraftSummaryController {
             ImageView logoView = new ImageView();
             try {
                 logoView.setImage(new Image(getClass().getResourceAsStream(logoPath)));
-                logoView.setFitHeight(30);
             } catch (Exception e) {
                 // logoView stays blank if image missing
             }
