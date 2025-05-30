@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.model.MockDraft;
 import com.model.MockeryFacade;
@@ -17,6 +18,7 @@ import com.model.Team;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -35,6 +37,8 @@ public class DraftBoardController {
     @FXML private ImageView teamLogoView;
     @FXML private TextFlow teamNeedsFlow;
     @FXML private VBox pickHistoryBox;
+    @FXML private TextField searchField;
+    @FXML private ComboBox<String> positionFilter;
 
 
     private MockDraft draft;
@@ -45,14 +49,35 @@ public class DraftBoardController {
     public void initialize() {
         draft = MockeryFacade.getInstance().getCurrentDraft();
         draftNameLabel.setText(draft.getDraftName());
+
+        // Setup position filter options
+        positionFilter.getItems().add("All");
+        positionFilter.getItems().addAll(MockeryFacade.getInstance().getAllPositions());
+        positionFilter.getSelectionModel().selectFirst();
+
+        // Add listeners to trigger filtering
+        searchField.textProperty().addListener((obs, oldVal, newVal) -> loadPlayerList());
+        positionFilter.setOnAction(e -> loadPlayerList());
+
         loadNextPick();
         loadPlayerList();
     }
 
     private void loadPlayerList() {
         playerListBox.getChildren().clear();
+
+        String search = searchField.getText().toLowerCase();
+        String selectedPosition = positionFilter.getValue();
+
         for (Player p : MockeryFacade.getInstance().getAllPlayers()) {
-            if (!draft.isPlayerTaken(p.getConsensusRank())) {
+            if (draft.isPlayerTaken(p.getConsensusRank())) continue;
+
+            boolean matchesSearch = p.getName().toLowerCase().contains(search)
+                                || p.getSchool().toLowerCase().contains(search);
+
+            boolean matchesPosition = selectedPosition.equals("All") || p.getPosition().equals(selectedPosition);
+
+            if (matchesSearch && matchesPosition) {
                 Button playerBtn = new Button(
                     "#" + p.getConsensusRank() + " - " + p.getName() +
                     " (" + p.getPosition() + ", " + p.getSchool() + ")"
@@ -272,7 +297,6 @@ public class DraftBoardController {
         }).start();
     }
 
-
     private void loadPickHistory() {
         pickHistoryBox.getChildren().clear();
         List<Pick> picks = draft.getPicks();
@@ -291,7 +315,15 @@ public class DraftBoardController {
             entry.setStyle("-fx-padding: 5px; -fx-background-color: " + (MockeryFacade.getInstance().getTeamByAbbreviation(pick.getTeam()).getPrimaryColor()) + ";");
             pickHistoryBox.getChildren().add(entry);
         }
+    }
 
+    private void setupFilters() {
+        searchField.textProperty().addListener((obs, oldText, newText) -> loadPlayerList());
+        positionFilter.getItems().clear();
+        positionFilter.getItems().add("All");
+        positionFilter.getItems().addAll(MockeryFacade.getInstance().getAllPositions().stream().sorted().collect(Collectors.toList()));        positionFilter.getSelectionModel().selectFirst();
+        positionFilter.getSelectionModel().selectFirst();
+        positionFilter.setOnAction(e -> loadPlayerList());
     }
 
 }

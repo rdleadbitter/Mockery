@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.text.TextFlow?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextAlignment?>
+<?import java.net.URL?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml"
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.mockeryfx.DraftBoardController"
-            prefWidth="1000" prefHeight="700">
+            prefWidth="1000"
+            prefHeight="700">
 
     <stylesheets>
         <URL value="@../styles.css"/>
     </stylesheets>
 
-    <!-- TOP: Current pick info -->
+    <!-- TOP: Pick Info -->
     <top>
-        <VBox alignment="CENTER" spacing="5" >
+        <VBox alignment="CENTER" spacing="3">
             <padding>
-                <Insets top="5" bottom="5" left="10" right="10"/>
+                <Insets top="5" bottom="5" left="5" right="5"/>
             </padding>
-
             <Label fx:id="draftNameLabel" styleClass="title"/>
-
-            <VBox alignment="CENTER">
-                <ImageView fx:id="teamLogoView" fitHeight="120" fitWidth="120" preserveRatio="true"/>
-            </VBox>
-
+            <ImageView fx:id="teamLogoView" fitHeight="80" preserveRatio="true"/>
             <TextFlow fx:id="teamNeedsFlow" styleClass="needs-flow" textAlignment="CENTER"/>
-            <HBox alignment="CENTER" spacing="20">
+            <HBox alignment="CENTER" spacing="10">
                 <Label fx:id="roundLabel"/>
                 <Label fx:id="pickLabel"/>
                 <Label fx:id="teamLabel"/>
@@ -41,56 +34,62 @@
         </VBox>
     </top>
 
-    <!-- CENTER: Player list and metadata -->
+    <!-- CENTER: Player List | Player Info | Draft History -->
     <center>
-        <HBox spacing="30" alignment="CENTER" VBox.vgrow="ALWAYS" >
-            <padding>
-                <Insets top="10" bottom="10" left="20" right="20"/>
-            </padding>
+        <GridPane hgap="10" vgap="10" GridPane.hgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="40"/>
+                <ColumnConstraints percentWidth="25"/>
+                <ColumnConstraints percentWidth="35"/>
+            </columnConstraints>
 
-            <!-- Scrollable list of available players -->
-            <VBox spacing="10" prefWidth="300">
-                <Label text="Available Players" styleClass="title"/>
-            
-                <ScrollPane fitToWidth="true" prefWidth="400" prefHeight="500" VBox.vgrow="ALWAYS">
-                    <VBox fx:id="playerListBox" spacing="10"/>
+            <!-- Available Players -->
+            <VBox spacing="6" GridPane.columnIndex="0" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER" >
+                    <Label text="Available Players" styleClass="title"/>
+                </HBox>
+                <HBox spacing="6">
+                    <TextField fx:id="searchField" promptText="Search name or school"/>
+                    <ComboBox fx:id="positionFilter" promptText="Position"/>
+                </HBox>
+                <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS">
+                    <VBox fx:id="playerListBox" spacing="5"/>
                 </ScrollPane>
-                    <Label text="(Click a player to view details)" style="-fx-font-style: italic;"/>
             </VBox>
 
-            <!-- Player metadata panel -->
-            <VBox spacing="10" prefWidth="300">
-                <Label text="Selected Player" styleClass="title"/>
+            <!-- Selected Player Info -->
+            <VBox spacing="8" GridPane.columnIndex="1">
+                <HBox alignment="CENTER" >
+                    <Label text="Selected Player" styleClass="title"/>
+                </HBox>
                 <Label fx:id="selectedNameLabel"/>
                 <Label fx:id="selectedPositionLabel"/>
                 <Label fx:id="selectedSchoolLabel"/>
-                <Label text="(Stats and measurables coming soon...)" style="-fx-font-style: italic;"/>
             </VBox>
 
-            <!-- Full pick list (if drafting all teams) -->
-            <VBox spacing="10" prefWidth="300">
-                    <Label text="Draft History" styleClass="title"/>
-                <ScrollPane fitToWidth="true" prefWidth="400" prefHeight="500" VBox.vgrow="ALWAYS">
+            <!-- Draft History -->
+            <VBox spacing="6" GridPane.columnIndex="2" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER" >
+                    <Label text="Pick List" styleClass="title"/>
+                </HBox>
+                <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS">
                     <VBox fx:id="pickHistoryBox" spacing="6"/>
                 </ScrollPane>
             </VBox>
-        </HBox>
+        </GridPane>
     </center>
 
-
-    <!-- BOTTOM: Confirm draft and trade -->
+    <!-- BOTTOM: Controls -->
     <bottom>
-        <VBox alignment="CENTER" spacing="8" maxHeight="80">
+        <VBox alignment="CENTER" spacing="6" maxHeight="80">
             <padding>
-                <Insets top="5" bottom="10" left="20" right="20"/>
+                <Insets top="4" bottom="6" left="10" right="10"/>
             </padding>
-
-            <HBox spacing="10" alignment="CENTER">
+            <HBox spacing="8" alignment="CENTER">
                 <Button fx:id="confirmDraftButton" text="Confirm Pick" onAction="#handleDraftPlayer" disable="true"/>
-                <TextField fx:id="tradeAbbrField" promptText="Trade to team (abbr)" prefWidth="150"/>
+                <TextField fx:id="tradeAbbrField" promptText="Trade to team (abbr)" prefWidth="140"/>
                 <Button text="Trade Pick" onAction="#handleTradePick"/>
             </HBox>
-
             <Label fx:id="statusLabel" id="statusLabel"/>
         </VBox>
     </bottom>
