@@ -5789,4 +5789,2077 @@
   "nextUnfilledPick" : null,
   "id" : "e92c9b04-a279-4217-a797-621ffca68096",
   "ownerId" : "9f81f6a7-2d74-4e1b-b294-960c5647d496"
+}, {
+  "draftName" : "arias draft",
+  "year" : 2025,
+  "picks" : [ {
+    "player" : {
+      "name" : "Cam Ward",
+      "position" : "QB",
+      "school" : "Miami",
+      "consensusRank" : 1
+    },
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Ashton Jeanty",
+      "position" : "RB",
+      "school" : "Boise State",
+      "consensusRank" : 5
+    },
+    "team" : "CLE",
+    "traded" : false,
+    "number" : 2,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Will Campbell",
+      "position" : "OT",
+      "school" : "LSU",
+      "consensusRank" : 4
+    },
+    "team" : "NYG",
+    "traded" : false,
+    "number" : 3,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Tyler Warren",
+      "position" : "TE",
+      "school" : "Penn State",
+      "consensusRank" : 8
+    },
+    "team" : "NE",
+    "traded" : false,
+    "number" : 4,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Armand Membou",
+      "position" : "OT",
+      "school" : "Missouri",
+      "consensusRank" : 7
+    },
+    "team" : "JAX",
+    "traded" : false,
+    "number" : 5,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Jalon Walker",
+      "position" : "EDGE",
+      "school" : "Georgia",
+      "consensusRank" : 9
+    },
+    "team" : "LV",
+    "traded" : false,
+    "number" : 6,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Tetairoa McMillan",
+      "position" : "WR",
+      "school" : "Arizona",
+      "consensusRank" : 10
+    },
+    "team" : "NYJ",
+    "traded" : false,
+    "number" : 7,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Kelvin Banks Jr.",
+      "position" : "OT",
+      "school" : "Texas",
+      "consensusRank" : 11
+    },
+    "team" : "CAR",
+    "traded" : false,
+    "number" : 8,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Shedeur Sanders",
+      "position" : "QB",
+      "school" : "Colorado",
+      "consensusRank" : 12
+    },
+    "team" : "NO",
+    "traded" : false,
+    "number" : 9,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Will Johnson",
+      "position" : "CB",
+      "school" : "Michigan",
+      "consensusRank" : 13
+    },
+    "team" : "CHI",
+    "traded" : false,
+    "number" : 10,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Mykel Williams",
+      "position" : "EDGE",
+      "school" : "Georgia",
+      "consensusRank" : 14
+    },
+    "team" : "SF",
+    "traded" : false,
+    "number" : 11,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Colston Loveland",
+      "position" : "TE",
+      "school" : "Michigan",
+      "consensusRank" : 15
+    },
+    "team" : "DAL",
+    "traded" : false,
+    "number" : 12,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Jahdae Barron",
+      "position" : "CB",
+      "school" : "Texas",
+      "consensusRank" : 16
+    },
+    "team" : "MIA",
+    "traded" : false,
+    "number" : 13,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Mike Green",
+      "position" : "EDGE",
+      "school" : "Marshall",
+      "consensusRank" : 17
+    },
+    "team" : "IND",
+    "traded" : false,
+    "number" : 14,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Matthew Golden",
+      "position" : "WR",
+      "school" : "Texas",
+      "consensusRank" : 18
+    },
+    "team" : "ATL",
+    "traded" : false,
+    "number" : 15,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Mason Graham",
+      "position" : "DL",
+      "school" : "Michigan",
+      "consensusRank" : 6
+    },
+    "team" : "ARI",
+    "traded" : false,
+    "number" : 16,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Abdul Carter",
+      "position" : "EDGE",
+      "school" : "Penn State",
+      "consensusRank" : 3
+    },
+    "team" : "CIN",
+    "traded" : false,
+    "number" : 17,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Travis Hunter",
+      "position" : "CB/WR",
+      "school" : "Colorado",
+      "consensusRank" : 2
+    },
+    "team" : "SEA",
+    "traded" : false,
+    "number" : 18,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Walter Nolen",
+      "position" : "DL",
+      "school" : "Mississippi",
+      "consensusRank" : 20
+    },
+    "team" : "TB",
+    "traded" : false,
+    "number" : 19,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Omarion Hampton",
+      "position" : "RB",
+      "school" : "North Carolina",
+      "consensusRank" : 22
+    },
+    "team" : "DEN",
+    "traded" : false,
+    "number" : 20,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Kenneth Grant",
+      "position" : "DL",
+      "school" : "Michigan",
+      "consensusRank" : 24
+    },
+    "team" : "PIT",
+    "traded" : false,
+    "number" : 21,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Jihaad Campbell",
+      "position" : "LB",
+      "school" : "Alabama",
+      "consensusRank" : 21
+    },
+    "team" : "LAC",
+    "traded" : false,
+    "number" : 22,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Grey Zabel",
+      "position" : "IOL",
+      "school" : "North Dakota State",
+      "consensusRank" : 25
+    },
+    "team" : "GB",
+    "traded" : false,
+    "number" : 23,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Derrick Harmon",
+      "position" : "DL",
+      "school" : "Oregon",
+      "consensusRank" : 27
+    },
+    "team" : "MIN",
+    "traded" : false,
+    "number" : 24,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Malaki Starks",
+      "position" : "S",
+      "school" : "Georgia",
+      "consensusRank" : 23
+    },
+    "team" : "HOU",
+    "traded" : false,
+    "number" : 25,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Josh Simmons",
+      "position" : "OT",
+      "school" : "Ohio State",
+      "consensusRank" : 26
+    },
+    "team" : "LAR",
+    "traded" : false,
+    "number" : 26,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Tyler Booker",
+      "position" : "IOL",
+      "school" : "Alabama",
+      "consensusRank" : 28
+    },
+    "team" : "BAL",
+    "traded" : false,
+    "number" : 27,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Nick Emmanwori",
+      "position" : "S",
+      "school" : "South Carolina",
+      "consensusRank" : 30
+    },
+    "team" : "DET",
+    "traded" : false,
+    "number" : 28,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Emeka Egbuka",
+      "position" : "WR",
+      "school" : "Ohio State",
+      "consensusRank" : 31
+    },
+    "team" : "WAS",
+    "traded" : false,
+    "number" : 29,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "James Pearce Jr.",
+      "position" : "EDGE",
+      "school" : "Tennessee",
+      "consensusRank" : 32
+    },
+    "team" : "BUF",
+    "traded" : false,
+    "number" : 30,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Donovan Ezeiruaku",
+      "position" : "EDGE",
+      "school" : "Boston College",
+      "consensusRank" : 29
+    },
+    "team" : "KC",
+    "traded" : false,
+    "number" : 31,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : {
+      "name" : "Shemar Stewart",
+      "position" : "EDGE",
+      "school" : "Texas A&M",
+      "consensusRank" : 19
+    },
+    "team" : "PHI",
+    "traded" : false,
+    "number" : 32,
+    "round" : 1,
+    "tradedFrom" : ""
+  } ],
+  "score" : null,
+  "userTeam" : "ALL",
+  "nextUnfilledPick" : null,
+  "id" : "c8c0283e-dd4f-46af-a009-152809cb0a73",
+  "ownerId" : "70e24789-fe39-4ac6-8203-e745e7c1c026"
+}, {
+  "draftName" : "k",
+  "year" : 2025,
+  "picks" : [ {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CLE",
+    "traded" : false,
+    "number" : 2,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYG",
+    "traded" : false,
+    "number" : 3,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NE",
+    "traded" : false,
+    "number" : 4,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "JAX",
+    "traded" : false,
+    "number" : 5,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LV",
+    "traded" : false,
+    "number" : 6,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYJ",
+    "traded" : false,
+    "number" : 7,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CAR",
+    "traded" : false,
+    "number" : 8,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NO",
+    "traded" : false,
+    "number" : 9,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CHI",
+    "traded" : false,
+    "number" : 10,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SF",
+    "traded" : false,
+    "number" : 11,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DAL",
+    "traded" : false,
+    "number" : 12,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIA",
+    "traded" : false,
+    "number" : 13,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "IND",
+    "traded" : false,
+    "number" : 14,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ATL",
+    "traded" : false,
+    "number" : 15,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ARI",
+    "traded" : false,
+    "number" : 16,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CIN",
+    "traded" : false,
+    "number" : 17,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SEA",
+    "traded" : false,
+    "number" : 18,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "TB",
+    "traded" : false,
+    "number" : 19,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DEN",
+    "traded" : false,
+    "number" : 20,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PIT",
+    "traded" : false,
+    "number" : 21,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAC",
+    "traded" : false,
+    "number" : 22,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "GB",
+    "traded" : false,
+    "number" : 23,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIN",
+    "traded" : false,
+    "number" : 24,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "HOU",
+    "traded" : false,
+    "number" : 25,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAR",
+    "traded" : false,
+    "number" : 26,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BAL",
+    "traded" : false,
+    "number" : 27,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DET",
+    "traded" : false,
+    "number" : 28,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "WAS",
+    "traded" : false,
+    "number" : 29,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BUF",
+    "traded" : false,
+    "number" : 30,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "KC",
+    "traded" : false,
+    "number" : 31,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PHI",
+    "traded" : false,
+    "number" : 32,
+    "round" : 1,
+    "tradedFrom" : ""
+  } ],
+  "score" : null,
+  "userTeam" : "ALL",
+  "nextUnfilledPick" : {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  },
+  "id" : "52ccca64-e28d-4734-a038-f128d88e0f84",
+  "ownerId" : "9f81f6a7-2d74-4e1b-b294-960c5647d496"
+}, {
+  "draftName" : "m",
+  "year" : 2025,
+  "picks" : [ {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CLE",
+    "traded" : false,
+    "number" : 2,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYG",
+    "traded" : false,
+    "number" : 3,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NE",
+    "traded" : false,
+    "number" : 4,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "JAX",
+    "traded" : false,
+    "number" : 5,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LV",
+    "traded" : false,
+    "number" : 6,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYJ",
+    "traded" : false,
+    "number" : 7,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CAR",
+    "traded" : false,
+    "number" : 8,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NO",
+    "traded" : false,
+    "number" : 9,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CHI",
+    "traded" : false,
+    "number" : 10,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SF",
+    "traded" : false,
+    "number" : 11,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DAL",
+    "traded" : false,
+    "number" : 12,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIA",
+    "traded" : false,
+    "number" : 13,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "IND",
+    "traded" : false,
+    "number" : 14,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ATL",
+    "traded" : false,
+    "number" : 15,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ARI",
+    "traded" : false,
+    "number" : 16,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CIN",
+    "traded" : false,
+    "number" : 17,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SEA",
+    "traded" : false,
+    "number" : 18,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "TB",
+    "traded" : false,
+    "number" : 19,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DEN",
+    "traded" : false,
+    "number" : 20,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PIT",
+    "traded" : false,
+    "number" : 21,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAC",
+    "traded" : false,
+    "number" : 22,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "GB",
+    "traded" : false,
+    "number" : 23,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIN",
+    "traded" : false,
+    "number" : 24,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "HOU",
+    "traded" : false,
+    "number" : 25,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAR",
+    "traded" : false,
+    "number" : 26,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BAL",
+    "traded" : false,
+    "number" : 27,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DET",
+    "traded" : false,
+    "number" : 28,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "WAS",
+    "traded" : false,
+    "number" : 29,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BUF",
+    "traded" : false,
+    "number" : 30,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "KC",
+    "traded" : false,
+    "number" : 31,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PHI",
+    "traded" : false,
+    "number" : 32,
+    "round" : 1,
+    "tradedFrom" : ""
+  } ],
+  "score" : null,
+  "userTeam" : "ALL",
+  "nextUnfilledPick" : {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  },
+  "id" : "dd71cb8e-ac1e-4ddd-8377-a65537ec3442",
+  "ownerId" : "9f81f6a7-2d74-4e1b-b294-960c5647d496"
+}, {
+  "draftName" : "bruh",
+  "year" : 2025,
+  "picks" : [ {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CLE",
+    "traded" : false,
+    "number" : 2,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYG",
+    "traded" : false,
+    "number" : 3,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NE",
+    "traded" : false,
+    "number" : 4,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "JAX",
+    "traded" : false,
+    "number" : 5,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LV",
+    "traded" : false,
+    "number" : 6,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYJ",
+    "traded" : false,
+    "number" : 7,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CAR",
+    "traded" : false,
+    "number" : 8,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NO",
+    "traded" : false,
+    "number" : 9,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CHI",
+    "traded" : false,
+    "number" : 10,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SF",
+    "traded" : false,
+    "number" : 11,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DAL",
+    "traded" : false,
+    "number" : 12,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIA",
+    "traded" : false,
+    "number" : 13,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "IND",
+    "traded" : false,
+    "number" : 14,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ATL",
+    "traded" : false,
+    "number" : 15,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ARI",
+    "traded" : false,
+    "number" : 16,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CIN",
+    "traded" : false,
+    "number" : 17,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SEA",
+    "traded" : false,
+    "number" : 18,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "TB",
+    "traded" : false,
+    "number" : 19,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DEN",
+    "traded" : false,
+    "number" : 20,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PIT",
+    "traded" : false,
+    "number" : 21,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAC",
+    "traded" : false,
+    "number" : 22,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "GB",
+    "traded" : false,
+    "number" : 23,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIN",
+    "traded" : false,
+    "number" : 24,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "HOU",
+    "traded" : false,
+    "number" : 25,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAR",
+    "traded" : false,
+    "number" : 26,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BAL",
+    "traded" : false,
+    "number" : 27,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DET",
+    "traded" : false,
+    "number" : 28,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "WAS",
+    "traded" : false,
+    "number" : 29,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BUF",
+    "traded" : false,
+    "number" : 30,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "KC",
+    "traded" : false,
+    "number" : 31,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PHI",
+    "traded" : false,
+    "number" : 32,
+    "round" : 1,
+    "tradedFrom" : ""
+  } ],
+  "score" : null,
+  "userTeam" : "ALL",
+  "nextUnfilledPick" : {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  },
+  "id" : "9c6ad699-d5dc-4f56-9b19-b797fdad8081",
+  "ownerId" : "9f81f6a7-2d74-4e1b-b294-960c5647d496"
+}, {
+  "draftName" : "aaslkdf",
+  "year" : 2025,
+  "picks" : [ {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CLE",
+    "traded" : false,
+    "number" : 2,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYG",
+    "traded" : false,
+    "number" : 3,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NE",
+    "traded" : false,
+    "number" : 4,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "JAX",
+    "traded" : false,
+    "number" : 5,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LV",
+    "traded" : false,
+    "number" : 6,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYJ",
+    "traded" : false,
+    "number" : 7,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CAR",
+    "traded" : false,
+    "number" : 8,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NO",
+    "traded" : false,
+    "number" : 9,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CHI",
+    "traded" : false,
+    "number" : 10,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SF",
+    "traded" : false,
+    "number" : 11,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DAL",
+    "traded" : false,
+    "number" : 12,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIA",
+    "traded" : false,
+    "number" : 13,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "IND",
+    "traded" : false,
+    "number" : 14,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ATL",
+    "traded" : false,
+    "number" : 15,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ARI",
+    "traded" : false,
+    "number" : 16,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CIN",
+    "traded" : false,
+    "number" : 17,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SEA",
+    "traded" : false,
+    "number" : 18,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "TB",
+    "traded" : false,
+    "number" : 19,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DEN",
+    "traded" : false,
+    "number" : 20,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PIT",
+    "traded" : false,
+    "number" : 21,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAC",
+    "traded" : false,
+    "number" : 22,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "GB",
+    "traded" : false,
+    "number" : 23,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIN",
+    "traded" : false,
+    "number" : 24,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "HOU",
+    "traded" : false,
+    "number" : 25,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAR",
+    "traded" : false,
+    "number" : 26,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BAL",
+    "traded" : false,
+    "number" : 27,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DET",
+    "traded" : false,
+    "number" : 28,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "WAS",
+    "traded" : false,
+    "number" : 29,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BUF",
+    "traded" : false,
+    "number" : 30,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "KC",
+    "traded" : false,
+    "number" : 31,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PHI",
+    "traded" : false,
+    "number" : 32,
+    "round" : 1,
+    "tradedFrom" : ""
+  } ],
+  "score" : null,
+  "userTeam" : "ALL",
+  "nextUnfilledPick" : {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  },
+  "id" : "17d33b71-2eb4-4a00-bae2-21eeaef9d1da",
+  "ownerId" : "9f81f6a7-2d74-4e1b-b294-960c5647d496"
+}, {
+  "draftName" : "hoopla",
+  "year" : 2025,
+  "picks" : [ {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CLE",
+    "traded" : false,
+    "number" : 2,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYG",
+    "traded" : false,
+    "number" : 3,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NE",
+    "traded" : false,
+    "number" : 4,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "JAX",
+    "traded" : false,
+    "number" : 5,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LV",
+    "traded" : false,
+    "number" : 6,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYJ",
+    "traded" : false,
+    "number" : 7,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CAR",
+    "traded" : false,
+    "number" : 8,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NO",
+    "traded" : false,
+    "number" : 9,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CHI",
+    "traded" : false,
+    "number" : 10,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SF",
+    "traded" : false,
+    "number" : 11,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DAL",
+    "traded" : false,
+    "number" : 12,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIA",
+    "traded" : false,
+    "number" : 13,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "IND",
+    "traded" : false,
+    "number" : 14,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ATL",
+    "traded" : false,
+    "number" : 15,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ARI",
+    "traded" : false,
+    "number" : 16,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CIN",
+    "traded" : false,
+    "number" : 17,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SEA",
+    "traded" : false,
+    "number" : 18,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "TB",
+    "traded" : false,
+    "number" : 19,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DEN",
+    "traded" : false,
+    "number" : 20,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PIT",
+    "traded" : false,
+    "number" : 21,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAC",
+    "traded" : false,
+    "number" : 22,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "GB",
+    "traded" : false,
+    "number" : 23,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIN",
+    "traded" : false,
+    "number" : 24,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "HOU",
+    "traded" : false,
+    "number" : 25,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAR",
+    "traded" : false,
+    "number" : 26,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BAL",
+    "traded" : false,
+    "number" : 27,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DET",
+    "traded" : false,
+    "number" : 28,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "WAS",
+    "traded" : false,
+    "number" : 29,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BUF",
+    "traded" : false,
+    "number" : 30,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "KC",
+    "traded" : false,
+    "number" : 31,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PHI",
+    "traded" : false,
+    "number" : 32,
+    "round" : 1,
+    "tradedFrom" : ""
+  } ],
+  "score" : null,
+  "userTeam" : "ALL",
+  "nextUnfilledPick" : {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  },
+  "id" : "41f4c11b-f59d-4d35-bd2d-af113a96949b",
+  "ownerId" : "9f81f6a7-2d74-4e1b-b294-960c5647d496"
+}, {
+  "draftName" : "whyiaughta",
+  "year" : 2025,
+  "picks" : [ {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CLE",
+    "traded" : false,
+    "number" : 2,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYG",
+    "traded" : false,
+    "number" : 3,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NE",
+    "traded" : false,
+    "number" : 4,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "JAX",
+    "traded" : false,
+    "number" : 5,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LV",
+    "traded" : false,
+    "number" : 6,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYJ",
+    "traded" : false,
+    "number" : 7,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CAR",
+    "traded" : false,
+    "number" : 8,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NO",
+    "traded" : false,
+    "number" : 9,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CHI",
+    "traded" : false,
+    "number" : 10,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SF",
+    "traded" : false,
+    "number" : 11,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DAL",
+    "traded" : false,
+    "number" : 12,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIA",
+    "traded" : false,
+    "number" : 13,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "IND",
+    "traded" : false,
+    "number" : 14,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ATL",
+    "traded" : false,
+    "number" : 15,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ARI",
+    "traded" : false,
+    "number" : 16,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CIN",
+    "traded" : false,
+    "number" : 17,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SEA",
+    "traded" : false,
+    "number" : 18,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "TB",
+    "traded" : false,
+    "number" : 19,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DEN",
+    "traded" : false,
+    "number" : 20,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PIT",
+    "traded" : false,
+    "number" : 21,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAC",
+    "traded" : false,
+    "number" : 22,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "GB",
+    "traded" : false,
+    "number" : 23,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIN",
+    "traded" : false,
+    "number" : 24,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "HOU",
+    "traded" : false,
+    "number" : 25,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAR",
+    "traded" : false,
+    "number" : 26,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BAL",
+    "traded" : false,
+    "number" : 27,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DET",
+    "traded" : false,
+    "number" : 28,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "WAS",
+    "traded" : false,
+    "number" : 29,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BUF",
+    "traded" : false,
+    "number" : 30,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "KC",
+    "traded" : false,
+    "number" : 31,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PHI",
+    "traded" : false,
+    "number" : 32,
+    "round" : 1,
+    "tradedFrom" : ""
+  } ],
+  "score" : null,
+  "userTeam" : "ALL",
+  "nextUnfilledPick" : {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  },
+  "id" : "c41fbae7-26e9-4adf-97d3-05470d2532ff",
+  "ownerId" : "9f81f6a7-2d74-4e1b-b294-960c5647d496"
+}, {
+  "draftName" : "huzzah",
+  "year" : 2025,
+  "picks" : [ {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CLE",
+    "traded" : false,
+    "number" : 2,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYG",
+    "traded" : false,
+    "number" : 3,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NE",
+    "traded" : false,
+    "number" : 4,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "JAX",
+    "traded" : false,
+    "number" : 5,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LV",
+    "traded" : false,
+    "number" : 6,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NYJ",
+    "traded" : false,
+    "number" : 7,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CAR",
+    "traded" : false,
+    "number" : 8,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "NO",
+    "traded" : false,
+    "number" : 9,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CHI",
+    "traded" : false,
+    "number" : 10,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SF",
+    "traded" : false,
+    "number" : 11,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DAL",
+    "traded" : false,
+    "number" : 12,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIA",
+    "traded" : false,
+    "number" : 13,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "IND",
+    "traded" : false,
+    "number" : 14,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ATL",
+    "traded" : false,
+    "number" : 15,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "ARI",
+    "traded" : false,
+    "number" : 16,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "CIN",
+    "traded" : false,
+    "number" : 17,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "SEA",
+    "traded" : false,
+    "number" : 18,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "TB",
+    "traded" : false,
+    "number" : 19,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DEN",
+    "traded" : false,
+    "number" : 20,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PIT",
+    "traded" : false,
+    "number" : 21,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAC",
+    "traded" : false,
+    "number" : 22,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "GB",
+    "traded" : false,
+    "number" : 23,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "MIN",
+    "traded" : false,
+    "number" : 24,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "HOU",
+    "traded" : false,
+    "number" : 25,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "LAR",
+    "traded" : false,
+    "number" : 26,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BAL",
+    "traded" : false,
+    "number" : 27,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "DET",
+    "traded" : false,
+    "number" : 28,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "WAS",
+    "traded" : false,
+    "number" : 29,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "BUF",
+    "traded" : false,
+    "number" : 30,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "KC",
+    "traded" : false,
+    "number" : 31,
+    "round" : 1,
+    "tradedFrom" : ""
+  }, {
+    "player" : null,
+    "team" : "PHI",
+    "traded" : false,
+    "number" : 32,
+    "round" : 1,
+    "tradedFrom" : ""
+  } ],
+  "score" : null,
+  "userTeam" : "ALL",
+  "nextUnfilledPick" : {
+    "player" : null,
+    "team" : "TEN",
+    "traded" : false,
+    "number" : 1,
+    "round" : 1,
+    "tradedFrom" : ""
+  },
+  "id" : "a231d8a4-b624-44b0-91ed-2823174e6364",
+  "ownerId" : "9f81f6a7-2d74-4e1b-b294-960c5647d496"
 } ]
