@@ -9,16 +9,18 @@ public class RawPick {
     private int pickNumber;
     private int round;
     private boolean traded;
+    private String tradedFrom;
 
     public RawPick() {
         // Required for Jackson deserialization
     }
 
-    public RawPick(String teamAbbreviation, int pickNumber, int round, boolean traded) {
+    public RawPick(String teamAbbreviation, int pickNumber, int round, boolean traded, String tradedFrom) {
         this.teamAbbreviation = teamAbbreviation;
         this.pickNumber = pickNumber;
         this.round = round;
         this.traded = traded;
+        this.tradedFrom = tradedFrom;
     }
 
     public String getTeamAbbreviation() {
@@ -51,5 +53,13 @@ public class RawPick {
 
     public void setTraded(boolean traded) {
         this.traded = traded;
+    }
+
+    public String getTradedFrom() {
+        return tradedFrom;
+    }
+    
+    public void setTradedFrom(String tradedFrom) {
+        this.tradedFrom = tradedFrom;
     }
 }

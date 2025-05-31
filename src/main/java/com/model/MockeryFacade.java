@@ -18,7 +18,6 @@ public class MockeryFacade {
 
     private User currentUser;
     private MockDraft currentDraft;
-    private String userDraftTeamAbbr;
 
     private MockeryFacade() {
         System.out.println("Facade constructor starting");
@@ -68,8 +67,8 @@ public class MockeryFacade {
         return teamDB.getTeams();
     }
 
-    public MockDraft createMockDraft(String name, int year, int maxRounds) {
-        MockDraft draft = MockDraftBuilder.createMockDraft(name, year, maxRounds, currentUser);
+    public MockDraft createMockDraft(String name, int year, int maxRounds, String userTeam) {
+        MockDraft draft = MockDraftBuilder.createMockDraft(name, year, maxRounds, currentUser, userTeam);
         draft.setOwnerId(currentUser.getUUID());
         draft.setId(UUID.randomUUID());
 
@@ -81,7 +80,6 @@ public class MockeryFacade {
     }
 
     public boolean assignPlayerToPick(MockDraft draft, int pickNumber, int playerId) {
-        Player player = playerDB.getPlayerById(playerId);
         boolean success = MockDraftBuilder.assignPlayerToPick(draft, pickNumber, playerId);
         if (success) draftDB.save();
         return success;
@@ -120,14 +118,6 @@ public class MockeryFacade {
         return teamDB.getTeamByAbbreviation(abbr);
     }
 
-    public void setUserDraftTeam(String abbr) {
-        this.userDraftTeamAbbr = abbr;
-    }
-
-    public String getUserDraftTeam() {
-        return userDraftTeamAbbr;
-    }
-
     public List<String> getAllPositions() {
         Set<String> positions = new HashSet<>();
         for (Player p : PlayerDatabase.getInstance().getPlayers()) {
@@ -145,4 +135,17 @@ public class MockeryFacade {
         return sorted;
     }
 
+    public List<String> getAllTeamsAbbreviations() {
+        List<String> abbrs = new ArrayList<>();
+        for (Team team : teamDB.getTeams()) {
+            abbrs.add(team.getAbbreviation());
+        }
+        Collections.sort(abbrs);
+        return abbrs;
+    }
+
+    public void deleteDraft(MockDraft draft) {
+        draftDB.removeDraft(draft);
+        userDB.removeDraftFromUsers(draft.getId());
+    }
 }

@@ -28,7 +28,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
 public class DraftBoardController {
-    @FXML private Label draftNameLabel, roundLabel, pickLabel, teamLabel;
+    @FXML private Label draftNameLabel, roundLabel, pickLabel;
     @FXML private Label selectedNameLabel, selectedPositionLabel, selectedSchoolLabel;
     @FXML private VBox playerListBox;
     @FXML private Label statusLabel;
@@ -39,6 +39,8 @@ public class DraftBoardController {
     @FXML private VBox pickHistoryBox;
     @FXML private TextField searchField;
     @FXML private ComboBox<String> positionFilter;
+    @FXML private Label teamCityLabel;
+    @FXML private Label teamNameLabel;
 
 
     private MockDraft draft;
@@ -134,17 +136,20 @@ public class DraftBoardController {
 
         String teamAbbr = currentPick.getTeam();
         Team team = MockeryFacade.getInstance().getTeamByAbbreviation(teamAbbr);
-        String userTeam = MockeryFacade.getInstance().getUserDraftTeam();
+        String userTeam = MockeryFacade.getInstance().getCurrentDraft().getUserTeam();
 
         roundLabel.setText("Round: " + currentPick.getRound());
         pickLabel.setText("Pick: " + currentPick.getNumber());
-        teamLabel.setText("Team: " + team.getName());
         statusLabel.setText("");
 
         // Logo
         String teamName = team.getName().toLowerCase();
         String path = "/images/nfl_logos/" + teamName + ".png";
         try {
+            teamCityLabel.setText(team.getCity().toUpperCase());
+            teamNameLabel.setText(team.getName().toUpperCase());
+            teamCityLabel.setStyle("-fx-text-fill: " + team.getSecondaryColor() + "; -fx-background-color: " + team.getPrimaryColor() + ";");
+            teamNameLabel.setStyle("-fx-text-fill: " + team.getSecondaryColor() + "; -fx-background-color: " + team.getPrimaryColor() + ";");
             teamLogoView.setImage(new Image(getClass().getResourceAsStream(path)));
         } catch (Exception e) {
             teamLogoView.setImage(new Image(getClass().getResourceAsStream("/images/nfl_logos/nfl.png")));
@@ -153,7 +158,7 @@ public class DraftBoardController {
         teamLogoView.setFitHeight(120);
 
         // Background
-        teamLabel.getParent().setStyle("-fx-background-color: " + team.getPrimaryColor() + ";");
+        pickLabel.getParent().setStyle("-fx-text-fill: " + team.getSecondaryColor() + "; -fx-background-color: " + team.getPrimaryColor() + ";");
 
         // Top needs rendering
         teamNeedsFlow.getChildren().clear();

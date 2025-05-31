@@ -17,6 +17,7 @@ public class MockDraft {
     private List<Pick> picks;
     private Integer score; // Nullable; only set after scoring
     private Set<Integer> draftedPlayerIds = new HashSet<>();
+    private String userTeam;
     
     @JsonProperty("id")
     private UUID id;
@@ -27,15 +28,17 @@ public class MockDraft {
     public MockDraft() {
         this.picks = new ArrayList<>();
         this.score = null;
+        this.userTeam = "NONE";
     }
 
-    public MockDraft(String draftName, int year, List<Pick> picks, UUID ownerId) {
+    public MockDraft(String draftName, int year, List<Pick> picks, UUID ownerId, String userTeam) {
         this.draftName = draftName;
         this.year = year;
         this.picks = picks;
         this.score = null;
         this.id = UUID.randomUUID();     // auto-generate unique ID
         this.ownerId = ownerId;          // track owning user
+        this.userTeam = userTeam;
     }
 
     public String getDraftName() {
@@ -131,5 +134,12 @@ public class MockDraft {
                 ", score=" + score +
                 ", totalPicks=" + (picks != null ? picks.size() : 0) +
                 '}';
+    }
+
+    public String getUserTeam() {
+        return userTeam;
+    }
+    public void setUserTeam(String userTeam) {
+        this.userTeam = userTeam;
     }
 }

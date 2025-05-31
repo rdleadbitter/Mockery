@@ -48,14 +48,13 @@ public class CreateDraftController {
             return;
         }
 
-        MockDraft draft = MockeryFacade.getInstance().createMockDraft(name, 2025, rounds);
+        MockDraft draft = MockeryFacade.getInstance().createMockDraft(name, 2025, rounds, teamAbbr);
         if (draft == null) {
             statusLabel.setText("Failed to create draft.");
             return;
         }
 
         MockeryFacade.getInstance().setCurrentDraft(draft);
-        MockeryFacade.getInstance().setUserDraftTeam(teamAbbr);
 
         try {
             App.setRoot("draftBoard");

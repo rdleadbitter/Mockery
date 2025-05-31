@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class MockDraftBuilder {
 
-    public static MockDraft createMockDraft(String draftName, int year, User user) {
+    public static MockDraft createMockDraft(String draftName, int year, User user, String userTeam) {
         List<Pick> basePicks = PickDatabase.getInstance().getPicks();
         System.out.println("MockDraftBuilder sees " + basePicks.size() + " base picks");
 
@@ -17,16 +17,17 @@ public class MockDraftBuilder {
                 basePick.getNumber(),
                 basePick.getRound(),
                 basePick.isTraded(),
-                null  // No player selected yet
+                basePick.getTradedFrom()
+                // No player selected yet
             ));
         }
 
-        MockDraft draft = new MockDraft(draftName, year, mockPicks, user.getUUID());
+        MockDraft draft = new MockDraft(draftName, year, mockPicks, user.getUUID(), userTeam);
         draft.setId(UUID.randomUUID());
         return draft;
     }
 
-    public static MockDraft createMockDraft(String draftName, int year, int maxRounds, User user) {
+    public static MockDraft createMockDraft(String draftName, int year, int maxRounds, User user, String userTeam) {
         List<Pick> allPicks = PickDatabase.getInstance().getPicks();
         List<Pick> filtered = new ArrayList<>();
 
@@ -36,13 +37,13 @@ public class MockDraftBuilder {
                     p.getTeam(),
                     p.getNumber(),
                     p.getRound(),
-                    false,
-                    null
+                    p.isTraded(),
+                    p.getTradedFrom()
                 ));
             }
         }
 
-        MockDraft draft = new MockDraft(draftName, year, filtered, user.getUUID());
+        MockDraft draft = new MockDraft(draftName, year, filtered, user.getUUID(), userTeam);
         draft.setId(UUID.randomUUID());
         return draft;
     }
@@ -63,10 +64,9 @@ public class MockDraftBuilder {
 
     public static boolean tradePick(MockDraft draft, int pickNumber, Team newTeam) {
         if (newTeam == null) return false;
-
         Pick pick = draft.getPickByNumber(pickNumber);
         if (pick == null) return false;
-
+        pick.setTradedFrom(pick.getTeam());
         pick.setTeam(newTeam.getAbbreviation());
         pick.setTraded(true);
         return true;

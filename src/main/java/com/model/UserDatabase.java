@@ -3,6 +3,7 @@ package com.model;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * The UserDatabase class is a singleton class that holds all the users in the system
@@ -88,5 +89,14 @@ public class UserDatabase {
     }
     public void logout() {
         this.currentUser = null;
+    }
+
+    public void removeDraftFromUsers(UUID id) {
+        for (User user : users) {
+            if (user.getMockDrafts().contains(id)) {
+                user.getMockDrafts().remove(id);
+            }
+        }
+        save();
     }
 }

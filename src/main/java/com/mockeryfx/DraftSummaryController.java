@@ -1,5 +1,7 @@
 package com.mockeryfx;
 
+import java.util.ArrayList;
+
 import com.model.MockDraft;
 import com.model.MockeryFacade;
 import com.model.Pick;
@@ -23,7 +25,13 @@ public class DraftSummaryController {
 
     @FXML
     public void initialize() {
-        draft = MockeryFacade.getInstance().getCurrentDraft();
+        String userTeam = MockeryFacade.getInstance().getCurrentDraft().getUserTeam();
+        System.out.println("User team: " + userTeam);
+        if (userTeam.equals("ALL") || userTeam.equals("NONE")) {
+            draft = MockeryFacade.getInstance().getCurrentDraft();
+        } else {
+            draft = loadUserPicksOnly(MockeryFacade.getInstance().getCurrentDraft());
+        }
         if (draft == null) {
             draftTitleLabel.setText("No draft available");
             return;
@@ -36,6 +44,7 @@ public class DraftSummaryController {
         summaryList.getChildren().clear();
 
         for (Pick pick : draft.getPicks()) {
+
             HBox row = new HBox(10);
             row.setAlignment(Pos.CENTER_LEFT);
             row.setPrefWidth(800);
@@ -47,13 +56,15 @@ public class DraftSummaryController {
             String logoPath = "/images/nfl_logos/" + teamName + ".png";
 
             ImageView logoView = new ImageView();
+            ImageView tradeIndicator = new ImageView();
             try {
                 logoView.setImage(new Image(getClass().getResourceAsStream(logoPath)));
+                tradeIndicator.setImage(new Image(getClass().getResourceAsStream("/images/trade.png")));
             } catch (Exception e) {
                 // logoView stays blank if image missing
             }
-            logoView.setFitHeight(30);
-            logoView.setFitWidth(30);
+            logoView.setFitHeight(40);
+            logoView.setFitWidth(40);
             logoView.setPreserveRatio(true);
 
             String text = "Round " + pick.getRound() + ", Pick " + pick.getNumber() +
@@ -71,14 +82,46 @@ public class DraftSummaryController {
 
             Label pickLabel = new Label(text);
             pickLabel.setWrapText(true);
-
             row.getChildren().addAll(logoView, pickLabel);
+            if (!pick.getTradedFrom().equals("") || pick.isTraded()) {
+                System.out.println(pick.getTradedFrom());
+                tradeIndicator.setFitHeight(20);
+                tradeIndicator.setFitWidth(20);
+                tradeIndicator.setPreserveRatio(true);
+                String tradedTeamAbbr = pick.getTradedFrom();
+                Team tradedTeam = MockeryFacade.getInstance().getTeamByAbbreviation(tradedTeamAbbr);
+                String tradedTeamName = tradedTeam.getName().toLowerCase();
+                String tradedLogoPath = "/images/nfl_logos/" + tradedTeamName + ".png";
+                ImageView tradedImageView = new ImageView();
+                try {
+                    tradedImageView.setImage(new Image(getClass().getResourceAsStream(tradedLogoPath)));
+                } catch (Exception e) {
+                    // logoView stays blank if image missing
+                }
+                tradedImageView.setFitHeight(30);
+                tradedImageView.setFitWidth(30);
+                tradedImageView.setPreserveRatio(true);
+                row.getChildren().addAll(tradeIndicator, tradedImageView);
+            }
 
             // Set background to team's primary color
             row.setStyle("-fx-background-color: " + team.getPrimaryColor() + "; -fx-padding: 10; -fx-background-radius: 8;");
 
             summaryList.getChildren().add(row);
         }
+    }
+
+    private MockDraft loadUserPicksOnly(MockDraft draft) {
+        MockDraft userDraft = new MockDraft(draft.getDraftName(), draft.getYear(), draft.getPicks(), draft.getOwnerId(), draft.getUserTeam());
+        userDraft.setId(draft.getId());
+        userDraft.setPicks(new ArrayList<>());
+        for (Pick pick : draft.getPicks()) {
+            if (pick.getTeam().equals(draft.getUserTeam())) {
+                userDraft.addPick(pick);
+            }
+        }
+
+        return userDraft;
     }
 
     @FXML

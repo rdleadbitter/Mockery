@@ -6,6 +6,7 @@ public class Pick {
     private boolean traded;
     private int number;
     private int round;
+    private String tradedFrom;
 
     public Pick() {
         this.player = new Player();
@@ -13,12 +14,14 @@ public class Pick {
         traded = false;
         number = 0;
         round = 0;
+        tradedFrom = "";
     }
-    public Pick(String team, int number, int round, boolean traded) {
+    public Pick(String team, int number, int round, boolean traded, String tradedFrom) {
         this.team = team;
         this.traded = traded;
         this.number = number;
         this.round = round;
+        this.tradedFrom = tradedFrom;
     }
     public Pick(String team, int number, int round, boolean traded, Player player) {
         this.team = team;
@@ -56,5 +59,11 @@ public class Pick {
     }
     public void setRound(int round) {
         this.round = round;
+    }
+    public String getTradedFrom() {
+        return tradedFrom;
+    }
+    public void setTradedFrom(String tradedFrom) {
+        this.tradedFrom = tradedFrom;
     }
 }

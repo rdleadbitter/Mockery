@@ -32,4 +32,9 @@ public class MockDraftDatabase {
     public void save() {
         DataWriter.saveMockDrafts(drafts);
     }
+
+    public void removeDraft(MockDraft draft) {
+        drafts.remove(draft);
+        save();
+    }
 }

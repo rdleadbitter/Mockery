@@ -30,6 +30,7 @@ public abstract class DataConstants {
     protected static final String PICK_ROUND = "round";
     protected static final String PICK_NUMBER = "number";
     protected static final String PICK_TRADED = "traded";
+    protected static final String PICK_TRADED_FROM = "tradedFrom";
 
     protected static final String MOCK_DRAFT_FILE_NAME = "data/MockDrafts.json";
     protected static final String MOCK_DRAFT_YEAR = "year";

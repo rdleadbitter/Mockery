@@ -66,9 +66,12 @@
             </VBox>
 
             <!-- Draft Board Panel -->
-            <VBox spacing="20" HBox.hgrow="ALWAYS">
+            <VBox spacing="26" HBox.hgrow="ALWAYS">
                 <HBox alignment="CENTER">
                     <Label text="Draft Order/Team Needs" styleClass="title"/>
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <ComboBox fx:id="teamFilter" promptText="Filter by Team"/>
                 </HBox>
                 <ScrollPane fitToWidth="true" fitToHeight="true">
                     <VBox fx:id="draftOrder" spacing="10" alignment="TOP_CENTER">

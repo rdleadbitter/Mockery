@@ -85,7 +85,7 @@ public class DataLoader extends DataConstants {
             for (RawPick raw : rawPicks) {
                 String abbr = raw.getTeamAbbreviation();
                 if (abbr != null) {
-                    picks.add(new Pick(abbr, raw.getNumber(), raw.getRound(), raw.isTraded()));
+                    picks.add(new Pick(abbr, raw.getNumber(), raw.getRound(), raw.isTraded(), raw.getTradedFrom()));
                 }
             }
         } catch (Exception e) {
