@@ -8,7 +8,7 @@ public class PlayerDatabase {
     private List<Player> players;
 
     private PlayerDatabase() {
-        players = DataLoader.getPlayers();
+        players = DataLoader.getPlayers(2026);
     }
 
     public static PlayerDatabase getInstance() {
@@ -16,6 +16,10 @@ public class PlayerDatabase {
             playerDatabase = new PlayerDatabase();
         }
         return playerDatabase;
+    }
+
+    public void loadPlayers(int year) {
+        players = DataLoader.getPlayers(year);
     }
 
     public List<Player> getPlayers() {
@@ -58,8 +62,8 @@ public class PlayerDatabase {
         return sortedPlayers;
     }
 
-    public void save() {
-        DataWriter.savePlayers();
+    public void save(int year) {
+        DataWriter.savePlayers(year);
     }
 
     public Player getPlayerById(int id) {

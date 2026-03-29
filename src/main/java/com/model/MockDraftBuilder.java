@@ -22,28 +22,26 @@ public class MockDraftBuilder {
             ));
         }
 
-        MockDraft draft = new MockDraft(draftName, year, mockPicks, user.getUUID(), userTeam);
+        MockDraft draft = new MockDraft(draftName, year, 7, mockPicks, user.getUUID(), userTeam);
         draft.setId(UUID.randomUUID());
         return draft;
     }
 
     public static MockDraft createMockDraft(String draftName, int year, int maxRounds, User user, String userTeam) {
         List<Pick> allPicks = PickDatabase.getInstance().getPicks();
-        List<Pick> filtered = new ArrayList<>();
+        List<Pick> mockPicks = new ArrayList<>();
 
         for (Pick p : allPicks) {
-            if (p.getRound() <= maxRounds) {
-                filtered.add(new Pick(
-                    p.getTeam(),
-                    p.getNumber(),
-                    p.getRound(),
-                    p.isTraded(),
-                    p.getTradedFrom()
-                ));
-            }
+            mockPicks.add(new Pick(
+                p.getTeam(),
+                p.getNumber(),
+                p.getRound(),
+                p.isTraded(),
+                p.getTradedFrom()
+            ));
         }
 
-        MockDraft draft = new MockDraft(draftName, year, filtered, user.getUUID(), userTeam);
+        MockDraft draft = new MockDraft(draftName, year, maxRounds, mockPicks, user.getUUID(), userTeam);
         draft.setId(UUID.randomUUID());
         return draft;
     }

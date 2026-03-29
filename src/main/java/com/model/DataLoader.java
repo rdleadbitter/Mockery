@@ -65,9 +65,27 @@ public class DataLoader extends DataConstants {
         }
     }
 
+    public static List<Player> getPlayers(int year) {
+        try {
+            return mapper.readValue(new File(getPlayerFileName(year)), new TypeReference<List<Player>>() {});
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
+
     public static List<Team> getTeams() {
         try {
             return mapper.readValue(new File(TEAM_FILE_NAME), new TypeReference<List<Team>>() {});
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
+    }
+
+    public static List<Team> getTeams(int year) {
+        try {
+            return mapper.readValue(new File(getTeamFileName(year)), new TypeReference<List<Team>>() {});
         } catch (Exception e) {
             e.printStackTrace();
             return new ArrayList<>();
@@ -79,6 +97,26 @@ public class DataLoader extends DataConstants {
         try {
             List<RawPick> rawPicks = mapper.readValue(
                 new File(PICK_FILE_NAME),
+                new TypeReference<List<RawPick>>() {}
+            );
+
+            for (RawPick raw : rawPicks) {
+                String abbr = raw.getTeamAbbreviation();
+                if (abbr != null) {
+                    picks.add(new Pick(abbr, raw.getNumber(), raw.getRound(), raw.isTraded(), raw.getTradedFrom()));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return picks;
+    }
+
+    public static List<Pick> getPicks(int year, Map<String, Team> teamMap) {
+        List<Pick> picks = new ArrayList<>();
+        try {
+            List<RawPick> rawPicks = mapper.readValue(
+                new File(getPickFileName(year)),
                 new TypeReference<List<RawPick>>() {}
             );
 

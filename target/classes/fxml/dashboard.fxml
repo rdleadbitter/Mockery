@@ -23,6 +23,8 @@
                 <Insets top="20" right="20" bottom="20" left="20"/>
             </padding>
             <Label fx:id="usernameLabel" styleClass="title"/>
+            <Label text="Year:"/>
+            <ComboBox fx:id="yearSelector" onAction="#handleYearChange"/>
             <Button text="Logout" onAction="#handleLogout"/>
         </HBox>
     </top>

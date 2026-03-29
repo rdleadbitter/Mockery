@@ -18,6 +18,7 @@ public class MockeryFacade {
 
     private User currentUser;
     private MockDraft currentDraft;
+    private int currentYear = 2026; // Default to current year
 
     private MockeryFacade() {
         System.out.println("Facade constructor starting");
@@ -77,6 +78,10 @@ public class MockeryFacade {
         DataWriter.saveUsers();                          // Persist updated user
         draftDB.save();// Persist all drafts
         return draft;
+    }
+
+    public MockDraft createMockDraft(String name, int maxRounds, String userTeam) {
+        return createMockDraft(name, currentYear, maxRounds, userTeam);
     }
 
     public boolean assignPlayerToPick(MockDraft draft, int pickNumber, int playerId) {
@@ -144,8 +149,50 @@ public class MockeryFacade {
         return abbrs;
     }
 
+    public List<Pick> getDraftPicksForTeam(MockDraft draft, String teamAbbr) {
+        List<Pick> picks = new ArrayList<>();
+        if (draft == null || teamAbbr == null) {
+            return picks;
+        }
+        for (Pick p : draft.getPicks()) {
+            if (teamAbbr.equals(p.getTeam())) {
+                picks.add(p);
+            }
+        }
+        return picks;
+    }
+
+    public List<Pick> getAllPicksForTeam(String teamAbbr) {
+        List<Pick> picks = new ArrayList<>();
+        if (teamAbbr == null) {
+            return picks;
+        }
+        for (Pick p : pickDB.getPicks()) {
+            if (teamAbbr.equals(p.getTeam())) {
+                picks.add(p);
+            }
+        }
+        return picks;
+    }
+
     public void deleteDraft(MockDraft draft) {
         draftDB.removeDraft(draft);
         userDB.removeDraftFromUsers(draft.getId());
+    }
+
+    public int getCurrentYear() {
+        return currentYear;
+    }
+
+    public void setCurrentYear(int year) {
+        this.currentYear = year;
+        // Reload data for the new year
+        playerDB.loadPlayers(year);
+        teamDB.loadTeams(year);
+        pickDB.loadPicks(year);
+    }
+
+    public void saveCurrentDraft() {
+        draftDB.save();
     }
 }

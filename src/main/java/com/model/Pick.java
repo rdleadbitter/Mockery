@@ -7,6 +7,7 @@ public class Pick {
     private int number;
     private int round;
     private String tradedFrom;
+    private int year;
 
     public Pick() {
         this.player = new Player();
@@ -65,5 +66,11 @@ public class Pick {
     }
     public void setTradedFrom(String tradedFrom) {
         this.tradedFrom = tradedFrom;
+    }
+    public int getYear() {
+        return year;
+    }
+    public void setYear(int year) {
+        this.year = year;
     }
 }

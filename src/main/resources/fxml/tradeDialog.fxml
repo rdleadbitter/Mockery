@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<DialogPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mockeryfx.TradeDialogController"
+            prefWidth="600"
+            prefHeight="400">
+
+    <stylesheets>
+        <URL value="@../styles.css"/>
+    </stylesheets>
+
+    <headerText>Trade Picks</headerText>
+
+    <content>
+        <VBox spacing="10">
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Trading with:"/>
+                <ComboBox fx:id="tradePartnerSelector" promptText="Select Team"/>
+            </HBox>
+
+            <HBox spacing="20">
+                <!-- Your Team's Picks -->
+                <VBox spacing="10">
+                    <Label text="Your Picks:"/>
+                    <FlowPane fx:id="yourPicksPane" prefWidth="200" prefHeight="200" hgap="8" vgap="8"/>
+                </VBox>
+
+                <!-- Trade Partner's Picks -->
+                <VBox spacing="10">
+                    <Label text="Their Picks:"/>
+                    <FlowPane fx:id="theirPicksPane" prefWidth="200" prefHeight="200" hgap="8" vgap="8"/>
+                </VBox>
+            </HBox>
+
+            <Label fx:id="statusLabel" style="-fx-text-fill: red;"/>
+        </VBox>
+    </content>
+
+    <ButtonType fx:id="confirmButton" text="Confirm Trade" buttonData="OK_DONE"/>
+    <ButtonType text="Cancel" buttonData="CANCEL_CLOSE"/>
+</DialogPane>

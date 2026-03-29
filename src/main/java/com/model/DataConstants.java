@@ -8,7 +8,7 @@ public abstract class DataConstants {
     protected static final String USER_PASSWORD = "password";
     protected static final String USER_MOCK_DRAFTS = "mockDrafts";
 
-    protected static final String TEAM_FILE_NAME = "data/Teams.json";
+    protected static final String TEAM_FILE_NAME = "Teams.json";
     protected static final String TEAM_NAME = "name";
     protected static final String TEAM_CITY = "city";
     protected static final String TEAM_ABBREVIATION = "abbreviation";
@@ -18,13 +18,13 @@ public abstract class DataConstants {
     protected static final String TEAM_PICKS = "picks";
     protected static final String TEAM_NEEDS = "needs";
 
-    protected static final String PLAYER_FILE_NAME = "data/Players.json";
+    protected static final String PLAYER_FILE_NAME = "Players.json";
     protected static final String PLAYER_NAME = "name";
     protected static final String PLAYER_POSITION = "position";
     protected static final String PLAYER_SCHOOL = "school";
     protected static final String PLAYER_CONSENSUS_RANK = "consensusRank";
 
-    protected static final String PICK_FILE_NAME = "data/Picks.json";
+    protected static final String PICK_FILE_NAME = "Picks.json";
     protected static final String PICK_TEAM = "team";
     protected static final String PICK_PLAYER = "player";
     protected static final String PICK_ROUND = "round";
@@ -38,4 +38,16 @@ public abstract class DataConstants {
     protected static final String MOCK_DRAFT_SCORE = "score";
     protected static final String MOCK_DRAFT_ID = "id";
     protected static final String MOCK_DRAFT_OWNER_ID = "ownderId";
+
+    public static String getPlayerFileName(int year) {
+        return "data/" + year + "_" + PLAYER_FILE_NAME;
+    }
+
+    public static String getTeamFileName(int year) {
+        return "data/" + year + "_" + TEAM_FILE_NAME;
+    }
+
+    public static String getPickFileName(int year) {
+        return "data/" + year + "_" + PICK_FILE_NAME;
+    }
 }

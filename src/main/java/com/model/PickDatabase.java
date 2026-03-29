@@ -31,7 +31,7 @@ public class PickDatabase {
         Map<String, Team> teamMap = DataLoader.buildTeamMap(teams);
         System.out.println("[PickDatabase] Team map keys: " + teamMap.keySet());
 
-        this.picks = DataLoader.getPicks(teamMap);
+        this.picks = DataLoader.getPicks(2026, teamMap);
         System.out.println("[PickDatabase] Loaded " + picks.size() + " picks");
     }
 
@@ -40,6 +40,12 @@ public class PickDatabase {
             pickDatabase = new PickDatabase();
         }
         return pickDatabase;
+    }
+
+    public void loadPicks(int year) {
+        List<Team> teams = TeamDatabase.getInstance().getTeams();
+        Map<String, Team> teamMap = DataLoader.buildTeamMap(teams);
+        this.picks = DataLoader.getPicks(year, teamMap);
     }
 
     public List<Pick> getPicks() {
@@ -65,7 +71,7 @@ public class PickDatabase {
         return picksInRound;
     }
 
-    public void save() {
-        DataWriter.savePicks();
+    public void save(int year) {
+        DataWriter.savePicks(year);
     }
 }

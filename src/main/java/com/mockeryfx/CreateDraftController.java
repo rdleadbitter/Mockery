@@ -2,7 +2,6 @@ package com.mockeryfx;
 
 import com.model.MockDraft;
 import com.model.MockeryFacade;
-import com.model.Team;
 
 import javafx.fxml.FXML; 
 import javafx.scene.control.ComboBox;
@@ -25,10 +24,10 @@ public class CreateDraftController {
 
         teamSelector.getItems().add("ALL");
         teamSelector.getItems().add("NONE");
-        // Populate team abbreviations
-        for (Team team : MockeryFacade.getInstance().getAllTeams()) {
-            teamSelector.getItems().add(team.getAbbreviation());
-        }
+        // Populate team abbreviations sorted by standing
+        MockeryFacade.getInstance().getAllTeams().stream()
+            .sorted((t1, t2) -> Integer.compare(t1.getStanding(), t2.getStanding()))
+            .forEach(team -> teamSelector.getItems().add(team.getAbbreviation()));
         teamSelector.setValue("ALL"); // default
     }
 
@@ -48,7 +47,7 @@ public class CreateDraftController {
             return;
         }
 
-        MockDraft draft = MockeryFacade.getInstance().createMockDraft(name, 2025, rounds, teamAbbr);
+        MockDraft draft = MockeryFacade.getInstance().createMockDraft(name, rounds, teamAbbr);
         if (draft == null) {
             statusLabel.setText("Failed to create draft.");
             return;

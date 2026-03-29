@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MockDraft {
     private String draftName;
     private int year;
+    private int maxRounds;
     private List<Pick> picks;
     private Integer score; // Nullable; only set after scoring
     private Set<Integer> draftedPlayerIds = new HashSet<>();
@@ -29,11 +30,24 @@ public class MockDraft {
         this.picks = new ArrayList<>();
         this.score = null;
         this.userTeam = "NONE";
+        this.maxRounds = 7; // default
     }
 
     public MockDraft(String draftName, int year, List<Pick> picks, UUID ownerId, String userTeam) {
         this.draftName = draftName;
         this.year = year;
+        this.maxRounds = 7; // default
+        this.picks = picks;
+        this.score = null;
+        this.id = UUID.randomUUID();     // auto-generate unique ID
+        this.ownerId = ownerId;          // track owning user
+        this.userTeam = userTeam;
+    }
+
+    public MockDraft(String draftName, int year, int maxRounds, List<Pick> picks, UUID ownerId, String userTeam) {
+        this.draftName = draftName;
+        this.year = year;
+        this.maxRounds = maxRounds;
         this.picks = picks;
         this.score = null;
         this.id = UUID.randomUUID();     // auto-generate unique ID
@@ -99,11 +113,11 @@ public class MockDraft {
 
     public Pick getNextUnfilledPick() {
         for (Pick pick : picks) {
-            if (pick.getPlayer() == null) {
+            if (pick.getPlayer() == null && pick.getRound() <= maxRounds) {
                 return pick;
             }
         }
-        return null; // all picks are filled
+        return null; // all picks are filled or maxRounds reached
     }
 
     @JsonIgnore
@@ -141,5 +155,12 @@ public class MockDraft {
     }
     public void setUserTeam(String userTeam) {
         this.userTeam = userTeam;
+    }
+
+    public int getMaxRounds() {
+        return maxRounds;
+    }
+    public void setMaxRounds(int maxRounds) {
+        this.maxRounds = maxRounds;
     }
 }

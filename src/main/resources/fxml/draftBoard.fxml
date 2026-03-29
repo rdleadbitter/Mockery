@@ -108,8 +108,7 @@
             </padding>
             <HBox spacing="8" alignment="BOTTOM_CENTER">
                 <Button fx:id="confirmDraftButton" text="Confirm Pick" onAction="#handleDraftPlayer" disable="true"/>
-                <TextField fx:id="tradeAbbrField" promptText="Trade to team (abbr)" prefWidth="140"/>
-                <Button text="Trade Pick" onAction="#handleTradePick"/>
+                <Button text="Trade Picks" onAction="#handleTradePick"/>
             </HBox>
             <Label fx:id="statusLabel" id="statusLabel"/>
         </VBox>

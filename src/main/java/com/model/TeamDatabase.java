@@ -16,7 +16,7 @@ public class TeamDatabase {
      * Initializes the picks ArrayList by calling the DataLoader class
      */
     private TeamDatabase() {
-        teams = DataLoader.getTeams();
+        teams = DataLoader.getTeams(2026);
     }
 
     /**
@@ -29,6 +29,10 @@ public class TeamDatabase {
             teamDatabase = new TeamDatabase();
         }
         return teamDatabase;
+    }
+
+    public void loadTeams(int year) {
+        teams = DataLoader.getTeams(year);
     }
 
     public List<Team> getTeams() {
@@ -53,7 +57,7 @@ public class TeamDatabase {
         return null;
     }
 
-    public void save() {
-        DataWriter.saveTeams();
+    public void save(int year) {
+        DataWriter.saveTeams(year);
     }
 }

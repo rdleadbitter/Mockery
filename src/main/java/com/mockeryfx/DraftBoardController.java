@@ -2,9 +2,11 @@ package com.mockeryfx;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -17,8 +19,13 @@ import com.model.Team;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -33,7 +40,6 @@ public class DraftBoardController {
     @FXML private VBox playerListBox;
     @FXML private Label statusLabel;
     @FXML private Button confirmDraftButton;
-    @FXML private TextField tradeAbbrField;
     @FXML private ImageView teamLogoView;
     @FXML private TextFlow teamNeedsFlow;
     @FXML private VBox pickHistoryBox;
@@ -126,6 +132,8 @@ public class DraftBoardController {
         currentPick = draft.getNextUnfilledPick();
 
         if (currentPick == null) {
+            // Save the completed draft
+            MockeryFacade.getInstance().saveCurrentDraft();
             try {
                 App.setRoot("draftSummary");
             } catch (Exception e) {
@@ -204,21 +212,69 @@ public class DraftBoardController {
 
     @FXML 
     private void handleTradePick() {
-        String abbr = tradeAbbrField.getText().trim().toUpperCase();
-        if (abbr.isEmpty()) {
-            statusLabel.setText("Enter a team abbreviation.");
-            return;
-        }
-        boolean success = MockeryFacade.getInstance().tradePick(draft, currentPick.getNumber(), abbr);
-        if (success) {
-            tradeAbbrField.clear();
-            loadNextPick();
-        } else {
-            statusLabel.setText("Invalid team abbreviation or trade failed.");
+        try {
+            // Load the trade dialog
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/tradeDialog.fxml"));
+            DialogPane dialogPane = loader.load();
+            TradeDialogController controller = loader.getController();
+
+            // Set up the dialog
+            String yourTeamAbbr = currentPick.getTeam();
+            controller.setDraft(draft, yourTeamAbbr);
+
+            Dialog<ButtonType> dialog = new Dialog<>();
+            dialog.setDialogPane(dialogPane);
+            dialog.setTitle("Trade Picks");
+            dialog.setResultConverter(buttonType -> {
+                if (buttonType.getButtonData() == ButtonBar.ButtonData.OK_DONE) {
+                    if (controller.validateTrade()) {
+                        return buttonType;
+                    } else {
+                        return null; // Don't close
+                    }
+                }
+                return buttonType;
+            });
+
+            Optional<ButtonType> result = dialog.showAndWait();
+            if (result.isPresent() && result.get().getButtonData() == ButtonBar.ButtonData.OK_DONE) {
+                // Perform the trade through the facade to keep a single authoritative path
+                List<Pick> yourPicks = controller.getSelectedYourPicks();
+                List<Pick> theirPicks = controller.getSelectedTheirPicks();
+                String partnerAbbr = controller.getTradePartner();
+
+                // Move your picks to partner team
+                for (Pick yourPick : yourPicks) {
+                    MockeryFacade.getInstance().tradePick(draft, yourPick.getNumber(), partnerAbbr);
+                }
+
+                // Move partner picks to your team
+                for (Pick theirPick : theirPicks) {
+                    MockeryFacade.getInstance().tradePick(draft, theirPick.getNumber(), yourTeamAbbr);
+                }
+
+                // Save and reload
+                    MockeryFacade.getInstance().saveCurrentDraft();
+                    loadNextPick();
+                    statusLabel.setText("Trade completed!");
+                }
+        } catch (Exception e) {
+            e.printStackTrace();
+            statusLabel.setText("Error opening trade dialog.");
         }
     }
 
     private Player determineAutoPick(Pick pick) {
+        // Hardcode Fernando Mendoza for pick 1.1
+        if (pick.getNumber() == 1) {
+            List<Player> allPlayers = MockeryFacade.getInstance().getAllPlayers();
+            for (Player p : allPlayers) {
+                if ("Fernando Mendoza".equals(p.getName())) {
+                    return p;
+                }
+            }
+        }
+
         String teamAbbr = pick.getTeam();
         Team team = MockeryFacade.getInstance().getTeamByAbbreviation(teamAbbr);
         List<Player> allPlayers = MockeryFacade.getInstance().getAllPlayers();
@@ -238,6 +294,8 @@ public class DraftBoardController {
         List<String> priorityNeeds = needs.subList(0, Math.min(maxConsider, needs.size()));
 
         List<Player> filtered = new ArrayList<>();
+        Random random = new Random();
+
         for (Player p : allPlayers) {
             if (takenIds.contains(p.getConsensusRank())) continue;
 
@@ -247,14 +305,16 @@ public class DraftBoardController {
             );
 
             if (matchesNeed) {
-                // Add QB weighting bonus
-                int bonus = pos.contains("QB") ? 6 : 0;
-                for (int i = 0; i < (3 + bonus); i++) {
+                // Add QB weighting bonus with some randomness
+                int baseWeight = pos.contains("QB") ? 6 : 3;
+                int randomBonus = random.nextInt(3); // 0-2 additional
+                int totalWeight = baseWeight + randomBonus;
+                for (int i = 0; i < totalWeight; i++) {
                     filtered.add(p);
                 }
             } else {
-                // Add non-matching players with low probability
-                if (round > 4) {
+                // Add non-matching players with low probability, but more randomly
+                if (round > 4 || random.nextDouble() < 0.3) { // 30% chance for non-needs in later rounds
                     filtered.add(p);
                 }
             }
@@ -269,10 +329,13 @@ public class DraftBoardController {
             }
         }
 
-        // Sort and pick a random top 3 to add variety
+        // Shuffle the filtered list to add randomness
+        Collections.shuffle(filtered, random);
+
+        // Sort by rank to prefer better players, but pick from top 10 instead of 3
         filtered.sort(Comparator.comparingInt(Player::getConsensusRank));
-        int limit = Math.min(3, filtered.size());
-        return filtered.get(new Random().nextInt(limit));
+        int limit = Math.min(10, filtered.size());
+        return filtered.get(random.nextInt(limit));
     }
 
     private void autoPick(Pick pick) {

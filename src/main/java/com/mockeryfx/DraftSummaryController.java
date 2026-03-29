@@ -1,6 +1,7 @@
 package com.mockeryfx;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.model.MockDraft;
 import com.model.MockeryFacade;
@@ -43,7 +44,26 @@ public class DraftSummaryController {
     private void loadSummary() {
         summaryList.getChildren().clear();
 
+        // Collect trade summary
+        List<String> tradeSummaries = new ArrayList<>();
         for (Pick pick : draft.getPicks()) {
+            if (pick.isTraded() && !pick.getTradedFrom().equals("") && !pick.getTradedFrom().equals(pick.getTeam())) {
+                Team fromTeam = MockeryFacade.getInstance().getTeamByAbbreviation(pick.getTradedFrom());
+                Team toTeam = MockeryFacade.getInstance().getTeamByAbbreviation(pick.getTeam());
+                tradeSummaries.add(fromTeam.getName() + " traded R" + pick.getRound() + " pick to " + toTeam.getName());
+            }
+        }
+
+        // Add trade summary if any
+        if (!tradeSummaries.isEmpty()) {
+            Label tradeLabel = new Label("Trades: " + String.join("; ", tradeSummaries));
+            tradeLabel.setStyle("-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10;");
+            summaryList.getChildren().add(tradeLabel);
+        }
+
+        // Show only drafted picks
+        for (Pick pick : draft.getPicks()) {
+            if (pick.getPlayer() == null) continue; // Skip undrafted picks
 
             HBox row = new HBox(10);
             row.setAlignment(Pos.CENTER_LEFT);
@@ -76,32 +96,32 @@ public class DraftSummaryController {
                         .findFirst()
                         .orElse(null);
                 text += ": " + player.getName() + " (" + player.getPosition() + ")";
-            } else {
-                text += ": [No Selection]";
             }
 
             Label pickLabel = new Label(text);
             pickLabel.setWrapText(true);
             row.getChildren().addAll(logoView, pickLabel);
-            if (!pick.getTradedFrom().equals("") || pick.isTraded()) {
+            if ((!pick.getTradedFrom().equals("") && !pick.getTradedFrom().equals(pick.getTeam())) || pick.isTraded()) {
                 System.out.println(pick.getTradedFrom());
                 tradeIndicator.setFitHeight(20);
                 tradeIndicator.setFitWidth(20);
                 tradeIndicator.setPreserveRatio(true);
                 String tradedTeamAbbr = pick.getTradedFrom();
-                Team tradedTeam = MockeryFacade.getInstance().getTeamByAbbreviation(tradedTeamAbbr);
-                String tradedTeamName = tradedTeam.getName().toLowerCase();
-                String tradedLogoPath = "/images/nfl_logos/" + tradedTeamName + ".png";
-                ImageView tradedImageView = new ImageView();
-                try {
-                    tradedImageView.setImage(new Image(getClass().getResourceAsStream(tradedLogoPath)));
-                } catch (Exception e) {
-                    // logoView stays blank if image missing
+                if (!tradedTeamAbbr.equals("")) {
+                    Team tradedTeam = MockeryFacade.getInstance().getTeamByAbbreviation(tradedTeamAbbr);
+                    String tradedTeamName = tradedTeam.getName().toLowerCase();
+                    String tradedLogoPath = "/images/nfl_logos/" + tradedTeamName + ".png";
+                    ImageView tradedImageView = new ImageView();
+                    try {
+                        tradedImageView.setImage(new Image(getClass().getResourceAsStream(tradedLogoPath)));
+                    } catch (Exception e) {
+                        // logoView stays blank if image missing
+                    }
+                    tradedImageView.setFitHeight(30);
+                    tradedImageView.setFitWidth(30);
+                    tradedImageView.setPreserveRatio(true);
+                    row.getChildren().addAll(tradeIndicator, tradedImageView);
                 }
-                tradedImageView.setFitHeight(30);
-                tradedImageView.setFitWidth(30);
-                tradedImageView.setPreserveRatio(true);
-                row.getChildren().addAll(tradeIndicator, tradedImageView);
             }
 
             // Set background to team's primary color

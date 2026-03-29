@@ -28,28 +28,28 @@ public class DataWriter extends DataConstants {
         }
     }
 
-    public static void savePlayers() {
+    public static void savePlayers(int year) {
         PlayerDatabase players = PlayerDatabase.getInstance();
         try {
-            mapper.writeValue(new File(PLAYER_FILE_NAME), players.getPlayers());
+            mapper.writeValue(new File("data/"+year+"_"+PLAYER_FILE_NAME), players.getPlayers());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void saveTeams() {
+    public static void saveTeams(int year) {
         TeamDatabase teams = TeamDatabase.getInstance();
         try {
-            mapper.writeValue(new File(TEAM_FILE_NAME), teams.getTeams());
+            mapper.writeValue(new File("data/"+year+"_"+TEAM_FILE_NAME), teams.getTeams());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void savePicks() {
+    public static void savePicks(int year) {
         PickDatabase picks = PickDatabase.getInstance();
         try {
-            mapper.writeValue(new File(PICK_FILE_NAME), picks.getPicks());
+            mapper.writeValue(new File("data/"+year+"_"+PICK_FILE_NAME), picks.getPicks());
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -17,6 +17,8 @@ import com.model.TeamDatabase;
 import com.model.User;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -30,8 +32,6 @@ import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 
 public class DashboardController {
     @FXML private Label usernameLabel;
@@ -39,6 +39,7 @@ public class DashboardController {
     @FXML private VBox bigBoard;
     @FXML private TextField searchField;
     @FXML private ComboBox<String> positionFilter, teamFilter;
+    @FXML private ComboBox<Integer> yearSelector;
     @FXML private VBox draftOrder;
 
     @FXML
@@ -46,6 +47,7 @@ public class DashboardController {
         User user = MockeryFacade.getInstance().getCurrentUser();
         if (user != null) {
             usernameLabel.setText(user.getUsername());
+            setupYearSelector();
             loadMockDrafts(user);
             setupFilters();
             loadBigBoard();
@@ -176,6 +178,27 @@ public class DashboardController {
         teamFilter.setOnAction(e -> loadDraftOrder());
 
         searchField.textProperty().addListener((obs, oldVal, newVal) -> loadDraftOrder());
+    }
+
+    private void setupYearSelector() {
+        yearSelector.getItems().clear();
+        // Add available years, assuming 2025 and 2026 based on data files
+        yearSelector.getItems().addAll(2025, 2026);
+        yearSelector.setValue(MockeryFacade.getInstance().getCurrentYear());
+    }
+
+    @FXML
+    private void handleYearChange() {
+        Integer selectedYear = yearSelector.getValue();
+        if (selectedYear != null) {
+            MockeryFacade.getInstance().setCurrentYear(selectedYear);
+            // Reload all data
+            User user = MockeryFacade.getInstance().getCurrentUser();
+            loadMockDrafts(user);
+            setupFilters();
+            loadBigBoard();
+            loadDraftOrder();
+        }
     }
 
     private void openDraft(MockDraft draft) {

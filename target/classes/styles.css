@@ -43,6 +43,33 @@
     -fx-padding: 10;
 }
 
+.combo-box {
+    -fx-font-size: 18px;
+    -fx-border-color: #518b46;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-background-color: #2a3329;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #2a3329;
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #4fb63d;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #2a3329;
+    -fx-border-color: #518b46;
+    -fx-border-width: 2px;
+    -fx-border-radius: 6;
+}
+
 .scroll-pane {
     -fx-background: #2a3329;
     -fx-border-color: #466141;
@@ -51,9 +78,22 @@
 }
 
 #statusLabel {
-    -fx-text-fill: #e05252;
+    -fx-text-fill: #ffffff;
     -fx-font-weight: bold;
-    -fx-font-size: 16px
+    -fx-font-size: 16px;
+}
+
+.dialog-pane {
+    -fx-background-color: #1f2e25;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #23402f;
+    -fx-text-fill: white;
+}
+
+.dialog-pane .content {
+    -fx-background-color: #1f2e25;
 }
 
 .vbox, .center-box{
@@ -67,6 +107,25 @@
     -fx-padding: 10 0 0 0;
     -fx-wrap-text: true;
     -fx-alignment: center;
+}
+
+.trade-pick-button {
+    -fx-background-color: #3c6b2a;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+}
+
+.trade-pick-button:hover {
+    -fx-background-color: #52a043;
+}
+
+.trade-pick-selected {
+    -fx-background-color: #f4d03f;
+    -fx-text-fill: #2f2f2f;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
 }
 
 .needs-available {
